@@ -134,7 +134,7 @@ const json = {
    }
   ],
   "showCompletedPage": false,
-  "navigateToUrl": "http://localhost:3000/introduction"
+  "navigateToUrl": "/introduction"
  }
 
 const PreStudy = () => {

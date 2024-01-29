@@ -4,31 +4,12 @@ import { Survey } from "survey-react-ui";
 
 const json = {
   "title": "Pre Task Questionnaire",
-  "description": "This questionnaire is intended to gather information about what you think about \"Work task\" that you just read a few minutes ago. Therefore, help us in doing this research by answering the following questions.",
+  "description": "This questionnaire is intended to gather information about what you think about \"Work task\". Therefore, help us in doing this research by answering the following questions.",
   "logoPosition": "right",
   "pages": [
    {
     "name": "page1",
     "elements": [
-     {
-      "type": "radiogroup",
-      "name": "task-exp",
-      "title": "Please comment on this task:",
-      "choices": [
-       {
-        "value": "Item 1",
-        "text": "I have dealt with this type of work tasks many times."
-       },
-       {
-        "value": "Item 2",
-        "text": "I have done this type of work task before."
-       },
-       {
-        "value": "Item 3",
-        "text": "This is the first time I have done this type of work task."
-       }
-      ]
-     },
      {
       "type": "matrix",
       "name": "prio-knowledge",
