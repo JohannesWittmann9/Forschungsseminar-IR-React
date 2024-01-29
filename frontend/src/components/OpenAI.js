@@ -4,15 +4,21 @@
 // Type: source code
 // Web address: https://www.youtube.com/watch?v=EzkWAviyYgg&lc=UgzoXG3DUQkpEw30Hc14AaABAg
 
+// Importing necessary React components and hooks
+import { useEffect, useRef, useState } from "react";
+
+// Importing images for user and bot avatars, and send button
 import bot from "./assets/bot.svg";
 import user from "./assets/user.svg";
 import sendBtn from "./assets/send.svg";
-import { useEffect, useRef, useState } from "react";
 
+// Functional component for OpenAI chat interface in React
 const OpenAI = () => {
+  // References to DOM elements
   const msgEnd = useRef(null);
   const chatForm = useRef(null);
 
+  // State variables for chat input and messages
   const [chatInput, setChatInput] = useState("");
   const [messages, setMessages] = useState([
     {
@@ -21,119 +27,30 @@ const OpenAI = () => {
     },
   ]);
 
-  // Author: adrianhajdin
-  // Date: 23 Dec 2022
-  // Title of source code: Build and Deploy Your Own ChatGPT AI App in JavaScript | OpenAI, Machine Learning
-  // Type: source code
-  // Web address: https://github.com/adrianhajdin/project_openai_codex/blob/main/client/script.js
-
-  // const loader = (element) => {
-  //   element.textContent = "";
-  //   loadInterval = setInterval(() => {
-  //     element.textContent += ".";
-  //     if (element.textContent === "....") {
-  //       element.textContent = "";
-  //     }
-  //   }, 300);
-  // };
-
-  //   const typeText = (element, text) => {
-  //     let index = 0;
-  //     let interval = setInterval(() => {
-  //       if (index < text.length) {
-  //         element.innerHTML += text.charAt(index);
-  //         index++;
-  //       } else {
-  //         clearInterval(interval);
-  //       }
-  //     }, 20);
-  //   };
-
-  //   const generateUniqueId = () => {
-  //     const timestamp = Date.now();
-  //     const randomNumber = Math.random();
-  //     const hexadecimalString = randomNumber.toString(16);
-
-  //     return `id-${timestamp}-${hexadecimalString}`;
-  //   };
-
-  //   const chatStripe = (isAi, value, uniqueId) => {
-  //     return `
-  //     <div className="wrapper ${isAi && "ai"}">
-  //       <div className="chat">
-  //         <div className="profile">
-  //           <img src="${isAi ? bot : user}" alt="${isAi ? "bot" : "user"}" />
-  //         </div>
-  //         <div className="message" id=${uniqueId}>${value}</div>
-  //       </div>
-  //     </div>
-  //     `;
-  //   };
-
-  //   const handleSubmit = async () => {
-  //     const newChatMessages = [...chatMessages];
-  //     newChatMessages.push(chatStripe(false, chatInput));
-
-  //     setChatMessages(newChatMessages);
-  //     setChatInput("");
-
-  //     const uniqueId = generateUniqueId();
-  //     setChatMessages((prevMessages) => [
-  //       ...prevMessages,
-  //       chatStripe(true, " ", uniqueId),
-  //     ]);
-
-  //     const messageDiv = document.getElementById(uniqueId);
-
-  //     loader(messageDiv);
-
-  //     try {
-  //       const response = await fetch(OPENAI_API_URL, {
-  //         method: "POST",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //           Authorization: `Bearer ${OPENAI_API_KEY}`,
-  //         },
-  //         body: JSON.stringify({
-  //           model: "gpt-3.5-turbo",
-  //           messages: [{ role: "user", content: chatInput }],
-  //         }),
-  //       });
-
-  //       clearInterval(loadInterval);
-  //       messageDiv.innerHTML = "";
-
-  //       if (response.ok) {
-  //         const data = await response.json();
-  //         const parsedData = data.bot.trim();
-
-  //         typeText(messageDiv, parsedData);
-  //       } else {
-  //         const err = await response.text();
-  //         messageDiv.innerHTML = "Something went wrong";
-  //         console.error(err);
-  //       }
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
-
+  // Effect to scroll to the bottom when new messages are added
   useEffect(() => {
     msgEnd.current.scrollIntoView();
   }, [messages]);
 
+  // Function to handle sending a message
   const handleSend = async (e) => {
     e.preventDefault();
 
+    // Get the current chat input text
     const text = chatInput;
+
+    // Clear the chat input field
     setChatInput("");
+
+    // Add user's message to the messages state
     setMessages([...messages, { text, isBot: false }]);
 
+    // Send a POST request to the OpenAI API with the user's message
     if (chatForm.current) {
       const data = new FormData(chatForm.current);
       const res = await fetch("http://localhost:7000/openai", {
         method: "POST",
-        header: {
+        headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
@@ -141,8 +58,10 @@ const OpenAI = () => {
         }),
       });
 
+      // Handle the response from the API
       if (res.ok) {
         const data = await res.json();
+        // Add the bot's response to the messages state
         setMessages([
           ...messages,
           {
@@ -150,22 +69,19 @@ const OpenAI = () => {
             isBot: false,
           },
           {
-            text: data,
+            text: data.bot,
             isBot: true,
           },
         ]);
       } else {
+        // Log any errors in the console
         const err = await res.json();
         console.log(err.error.error.message);
       }
     }
   };
 
-  // const handleEnter =  (e) => {
-  //   e.preventDefault();
-  //   if (e.keyCode === 13) handleSend();
-  // };
-
+  // JSX structure for rendering the chat interface
   return (
     <div id="open-ai">
       <div id="chat_container">
@@ -188,7 +104,6 @@ const OpenAI = () => {
           rows="1"
           placeholder="Ask Codex..."
           value={chatInput}
-          // onKeyDown={handleEnter}
           onChange={(e) => setChatInput(e.target.value)}
         ></textarea>
         <button className="send-btn">
@@ -199,4 +114,5 @@ const OpenAI = () => {
   );
 };
 
+// Export the OpenAI component for use in other parts of the application
 export default OpenAI;
