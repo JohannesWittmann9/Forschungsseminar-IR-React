@@ -4,7 +4,7 @@ import { Survey } from "survey-react-ui";
 
 const json = {
   "title": "Pre Task Questionnaire",
-  "description": "This questionnaire is intended to gather information about what you think about \"Work task\" that you just read a few minutes ago. Therefore, help us in doing this research by answering the following questions.",
+  "description": "This questionnaire is intended to gather information about what you think about \"Work task\". Therefore, help us in doing this research by answering the following questions.",
   "logoPosition": "right",
   "pages": [
    {
