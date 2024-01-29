@@ -67,7 +67,7 @@ const json = {
             },
             {
               value: "Row 5",
-              text: "How complexity do you think this How complexity do you think this",
+              text: "How complex do you think this task is?",
             },
           ],
         },
