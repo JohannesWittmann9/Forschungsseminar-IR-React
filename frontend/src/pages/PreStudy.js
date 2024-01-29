@@ -131,43 +131,10 @@ const json = {
      }
     ],
     "title": "Interaction with large language model behaviours"
-   },
-   {
-    "name": "page3",
-    "elements": [
-     {
-      "type": "rating",
-      "name": "complex-tasks-freq",
-      "title": "How often do you work with complex tasks?",
-      "minRateDescription": "Rarely",
-      "maxRateDescription": "Always"
-     },
-     {
-      "type": "comment",
-      "name": "complex-tasks-field",
-      "title": "When and in what field do you often encounter difficult tasks?"
-     },
-     {
-      "type": "radiogroup",
-      "name": "question4",
-      "title": "Which information retrieval system would you prefer when facing with complex tasks?",
-      "choices": [
-       {
-        "value": "Item 3",
-        "text": "Normal web search (Google, Bing) "
-       },
-       {
-        "value": "Item 4",
-        "text": "Large Language Models (ChatGPT, BingAI)"
-       }
-      ]
-     }
-    ],
-    "title": "Complex tasks"
    }
   ],
   "showCompletedPage": false,
-  "navigateToUrl": "/introduction"
+  "navigateToUrl": "http://localhost:3000/introduction"
  }
 
 const PreStudy = () => {

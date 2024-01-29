@@ -43,7 +43,7 @@ const Introduction = () => {
         testing.
       </p>
       <p>
-        <strong>Besh wishes</strong>
+        <strong>Best wishes</strong>
       </p>
       <button className="continue-btn" onClick={handleClick}>
         Continue
