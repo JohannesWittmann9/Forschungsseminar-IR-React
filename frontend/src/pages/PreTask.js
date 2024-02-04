@@ -11,49 +11,26 @@ const json = {
     "name": "page1",
     "elements": [
      {
-      "type": "matrix",
-      "name": "prio-knowledge",
-      "title": "Please comment on the following items.",
-      "columns": [
-       {
-        "value": "Column 1",
-        "text": "Very Low"
-       },
-       {
-        "value": "Column 2",
-        "text": "A Little"
-       },
-       {
-        "value": "Column 3",
-        "text": "Neither much nor little"
-       },
-       {
-        "value": "Column 4",
-        "text": "Much"
-       },
-       {
-        "value": "Column 5",
-        "text": "Very Much"
-       }
-      ],
-      "rows": [
-       {
-        "value": "Row 3",
-        "text": "How much do you know about the subject of this work task?"
-       },
-       {
-        "value": "Row 4",
-        "text": "How much do you know about the process of doing this work task?"
-       },
-       {
-        "value": "Row 5",
-        "text": "How complex do you think this work task is?"
-       }
-      ]
+      "type": "rating",
+      "name": "familiarity",
+      "title": "How familiar are you with the topic?",
+      "rateCount": 7,
+      "rateMax": 7,
+      "minRateDescription": "Not familiar",
+      "maxRateDescription": "Very familiar"
+     },
+     {
+      "type": "rating",
+      "name": "complexity",
+      "title": "How complex would you rate the task to be, just by reading it?",
+      "rateCount": 7,
+      "rateMax": 7,
+      "minRateDescription": "Not complex",
+      "maxRateDescription": "Very complex"
      }
     ],
     "title": "Task 1:",
-    "description": "Your brother complains of constant headaches. One night when his headache is accompanied by nausea, you go to the medical center with Daniel and find out that Daniel's blood pressure is 21. You want to know: what causes high blood pressure? What diseases raise blood pressure? What are the ways to control high blood pressure? Help your brother by gathering relevant information and refer him to a specialist."
+    "description": "Your brother complains of constant headaches. One night when his headache is accompanied by nausea, you go to the medical center with him and find out that his blood pressure is 120. You want to know: what causes high blood pressure? What diseases raise blood pressure? What are the ways to control high blood pressure?"
    }
   ],
   "navigateToUrl": "/main"
