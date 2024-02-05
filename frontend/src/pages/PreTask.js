@@ -33,6 +33,7 @@ const json = {
     "description": "Your brother complains of constant headaches. One night when his headache is accompanied by nausea, you go to the medical center with him and find out that his blood pressure is 120. You want to know: what causes high blood pressure? What diseases raise blood pressure? What are the ways to control high blood pressure?"
    }
   ],
+  "showCompletedPage": false,
   "navigateToUrl": "/main"
  }
 
