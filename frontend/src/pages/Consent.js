@@ -100,7 +100,8 @@ const Consent = () => {
           <ol className="procedure-list">
             <li>Read and accept the declaration of consent</li>
             <li>Complete the pre study questionnaires </li>
-            <li>Study the first work task and imagine this is a real job</li>
+            <li>Study the work task and imagine this is a real job</li>
+            <li>Complete the pre task questionnaires </li>
             <li>
               Do the search:
               <ul>
@@ -126,7 +127,7 @@ const Consent = () => {
               After completing the search for work task, complete the
               post-search questionnaire.
             </li>
-            <li>Repeat steps 1 to 6 for work tasks 2 to 4</li>
+            <li>Repeat steps 3 to 6 for work tasks 2 to 4</li>
             <li>Complete the demographic questionnaires </li>
           </ol>
           <p>

@@ -17,7 +17,7 @@ const Introduction = () => {
         In this experiment, you will be given 4 work tasks. You will be asked to
         search for information for each of these work tasks. In this regard, you
         are free to choose an information system (eg normal search engine or
-        generative AI) that provides useful that provides useful information for
+        generative AI) that provides useful information for
         the task at hand. In summary, the process of performing this test is:
       </p>
       <ol className="procedure-list">

@@ -82,13 +82,12 @@ const json = {
        }
       ]
      }
-    ],
-    "title": "Online information behaviours"
+    ]
    }
   ],
   "showCompletedPage": false,
   "navigateToUrl": "/introduction"
-}
+ }
 
 const PreStudy = () => {
   const model = new Model(json);

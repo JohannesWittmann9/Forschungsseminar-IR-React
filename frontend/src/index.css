@@ -61,7 +61,7 @@ h3 {
 
 @media screen and (min-width: 1024px) {
   body {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   h1 {
@@ -156,6 +156,10 @@ h3 {
 }
 
 /* Introduction */
+.protocol {
+  font-size: 1.8rem;
+}
+
 .protocol p {
   margin: 1rem 0;
 }
@@ -276,6 +280,10 @@ h3 {
 
 .result-title:hover {
   text-decoration: underline;
+}
+
+.result-link:visited {
+  color: blue;
 }
 
 .result-snippet,
@@ -432,11 +440,11 @@ textarea {
   height: 3rem;
 }
 
-@media screen and (min-width: 1400px){
+@media screen and (min-width: 1400px) {
   #normal-se {
     height: 77vh;
   }
-  
+
   .task p {
     font-size: 2rem;
   }
@@ -450,12 +458,12 @@ textarea {
   .search-form {
     height: 6rem;
   }
-  
+
   .search-form .search-input {
     font-size: 1.8rem;
     padding: 1rem 2rem;
   }
-  
+
   .search-form .search-btn {
     font-size: 1.8rem;
     width: 5rem;
@@ -463,7 +471,8 @@ textarea {
     line-height: 5rem;
   }
 
-  textarea, .message{
+  textarea,
+  .message {
     font-size: 1.8rem;
   }
 
@@ -474,11 +483,11 @@ textarea {
   .result-title {
     font-size: 2rem;
   }
-  
+
   .result-title:hover {
     text-decoration: underline;
   }
-  
+
   .result-snippet,
   .result-link {
     font-size: 1.5rem;
