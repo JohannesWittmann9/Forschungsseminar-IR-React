@@ -3,9 +3,8 @@ import SearchInteraction from "../models/SearchInteraction.js";
 
 export const addSearchInteraction = async (req, res) => {
   try {
-    const { interaction_id, user_id, query, number_of_retrieved_docs } =
+    const { interaction_id, user_id, session_id, query, number_of_retrieved_docs } =
       req.body;
-    const session_id = req.session._id;
     const searchInteraction = await SearchInteraction.create({
       interaction_id,
       user_id,

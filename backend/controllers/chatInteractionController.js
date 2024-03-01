@@ -2,8 +2,7 @@ import ChatInteraction from "../models/ChatInteraction.js"
 
 export const addChatInteraction = async (req, res) => {
     try {
-      const { interaction_id, user_id, dialogues } = req.body;
-      const session_id = req.session._id;
+      const { interaction_id, user_id, session_id, dialogues } = req.body;
       const chatInteraction = await ChatInteraction.create({
         interaction_id,
         user_id,

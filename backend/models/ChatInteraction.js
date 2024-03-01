@@ -4,7 +4,7 @@ const ChatInteractionSchema = new mongoose.Schema(
   {
     interaction_id: String,
     user_id: String,
-    session_id: mongoose.Types.ObjectId,
+    session_id: String,
     dialogues: {
       type: Array,
       default: [
