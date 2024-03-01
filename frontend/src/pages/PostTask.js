@@ -3,66 +3,162 @@ import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
 
 const json = {
-  "title": "Post Task Questionnnaire",
-  "description": "Please answer the following questions based on your search. Thank you for your effort!",
-  "logoPosition": "right",
-  "pages": [
-   {
-    "name": "page1",
-    "elements": [
-     {
-      "type": "comment",
-      "name": "answer",
-      "title": "If you had to, what would be your answer to the question?"
-     },
-     {
-      "type": "rating",
-      "name": "complexity-rate",
-      "title": "How complex would you rate the task now?",
-      "rateCount": 7,
-      "rateMax": 7,
-      "minRateDescription": "Not complex",
-      "maxRateDescription": "Very complex"
-     },
-     {
-      "type": "rating",
-      "name": "satisfaction-rate",
-      "title": "How satisfied are you with your search result?",
-      "rateCount": 7,
-      "rateMax": 7,
-      "minRateDescription": "Not satisfied",
-      "maxRateDescription": "Very satisfied"
-     },
-     {
-      "type": "radiogroup",
-      "name": "question3",
-      "title": "It is important that you pay attention in this study. Please tick 'Okay'. (Yes, No, Okay)",
-      "choices": [
-       {
-        "value": "Item 1",
-        "text": "Yes"
-       },
-       {
-        "value": "Item 2",
-        "text": "No"
-       },
-       {
-        "value": "Item 3",
-        "text": "Okay"
-       }
-      ]
-     }
-    ],
-    "title": "Task 1:",
-    "description": "Your brother complains of constant headaches. One night when his headache is accompanied by nausea, you go to the medical center with him and find out that his blood pressure is 120. You want to know: what causes high blood pressure? What are the ways to control high blood pressure?"
-   }
+  title: "Post Task Questionnnaire",
+  description:
+    "Please answer the following questions based on your search. Thank you for your effort!",
+  logoPosition: "right",
+  pages: [
+    {
+      name: "page1",
+      elements: [
+        {
+          type: "comment",
+          name: "answer",
+          title: "If you had to, what would be your answer to the question?",
+        },
+        {
+          type: "rating",
+          name: "complexity-rate",
+          title: "How complex would you rate the task now?",
+          rateCount: 7,
+          rateMax: 7,
+          minRateDescription: "Not complex",
+          maxRateDescription: "Very complex",
+        },
+        {
+          type: "rating",
+          name: "satisfaction-rate",
+          title: "How satisfied are you with your search result?",
+          rateCount: 7,
+          rateMax: 7,
+          minRateDescription: "Not satisfied",
+          maxRateDescription: "Very satisfied",
+        },
+        {
+          type: "radiogroup",
+          name: "question3",
+          title:
+            "It is important that you pay attention in this study. Please tick 'Okay'. (Yes, No, Okay)",
+          choices: [
+            {
+              value: "Yes",
+              text: "Yes",
+            },
+            {
+              value: "No",
+              text: "No",
+            },
+            {
+              value: "Okay",
+              text: "Okay",
+            },
+          ],
+        },
+      ],
+      title: "",
+      description: "",
+    },
   ],
-  "showCompletedPage": false,
-  "navigateToUrl": "/poststudy"
- }
+  showCompletedPage: false,
+};
 
-const PostTask = () => {
+const sendPostTaskData = (user_id, session_id, task_id, results, options) => {
+  const postTaskXHR = new XMLHttpRequest();
+  postTaskXHR.open("POST", "http://localhost:7000/api/posttasks");
+  postTaskXHR.setRequestHeader(
+    "Content-Type",
+    "application/json; charset=utf-8"
+  );
+  postTaskXHR.onload = postTaskXHR.onerror = function () {
+    if (postTaskXHR.status === 200) {
+      options.showSaveSuccess();
+    } else {
+      options.showSaveError();
+    }
+  };
+  postTaskXHR.send(JSON.stringify({ user_id, session_id, task_id, results }));
+};
+
+const sendSessionData = (
+  user_id,
+  session_id,
+  task_id,
+  session_start_time,
+  session_end_time,
+  options
+) => {
+  const sessionXHR = new XMLHttpRequest();
+  sessionXHR.open("POST", "http://localhost:7000/api/sessions");
+  sessionXHR.setRequestHeader(
+    "Content-Type",
+    "application/json; charset=utf-8"
+  );
+  sessionXHR.onload = sessionXHR.onerror = function () {
+    if (sessionXHR.status === 200) {
+      options.showSaveSuccess();
+    } else {
+      options.showSaveError();
+    }
+  };
+  sessionXHR.send(
+    JSON.stringify({
+      session_id,
+      user_id,
+      task_id,
+      session_start_time,
+      session_end_time,
+    })
+  );
+};
+
+let currentIndex;
+
+const PostTask = ({ task, tasks }) => {
+  json.pages[0].title = task.title;
+  json.pages[0].description = task.desc;
+
+  const task_id = task.id;
+  currentIndex = tasks.findIndex((t) => t.id === task_id);
+
+  if (currentIndex !== -1 && currentIndex + 1 < tasks.length) {
+    const nextTask = tasks[currentIndex + 1];
+    json.navigateToUrl = `/pretask/${nextTask.id}`;
+  } else {
+    json.navigateToUrl = "/poststudy";
+  }
+
   const model = new Model(json);
+
+  model.onComplete.add(function (sender, options) {
+    const user_id = localStorage.getItem("userId");
+    const session_id = localStorage.getItem("sessionId");
+    const results = sender.data;
+
+    options.showSaveInProgress();
+
+    sendPostTaskData(user_id, session_id, task_id, results, options);
+
+    const session_start_time = localStorage.getItem("session_start_time");
+    const session_end_time = new Date();
+
+    sendSessionData(
+      user_id,
+      session_id,
+      task_id,
+      session_start_time,
+      session_end_time,
+      options
+    );
+
+    // start time of the next session is end time of the current session
+    localStorage.setItem(
+      "session_start_time",
+      session_end_time
+    );
+
+    const nextSessionId = `session${currentIndex + 2}-${crypto.randomUUID()}`;
+    localStorage.setItem("sessionId", nextSessionId);
+  });
   return <Survey model={model}></Survey>;
 };
 

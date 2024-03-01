@@ -2,21 +2,18 @@ import { useNavigate } from "react-router-dom";
 import OpenAI from "../components/OpenAI";
 import SearchEngine from "../components/SearchEngine";
 
-const Main = () => {
+const Main = ({task}) => {
   const navigate = useNavigate();
   const handleClick = (event) => {
     event.preventDefault();
     console.log("Button clicked");
-    navigate("/posttask");
+    navigate(`/posttask/${task.id}`);
   };
   return (
     <div className="main-container">
       <div className="task">
         <p>
-          Your brother complains of constant headaches. One night when his
-          headache is accompanied by nausea, you go to the medical center with
-          him and find out that his blood pressure is 120. You want to know:
-          What causes high blood pressure? What are the ways to control high blood pressure?
+          {task.desc}
         </p>
         <button className="continue-btn" onClick={handleClick}>
           Continue

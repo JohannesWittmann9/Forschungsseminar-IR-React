@@ -5,10 +5,34 @@ const Consent = () => {
   const [userId, setUserId] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(`Submitted User ID: ${userId}`);
-    navigate("/prestudy");
+
+    try {
+      // Save user ID to local storage
+      localStorage.setItem("userId", userId);
+      const studyStartTime = new Date();
+
+      // Send user ID to the backend
+      console.log("Sending request to backend...");
+      const response = await fetch("http://localhost:7000/api/users", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ user_id: userId, studyStartTime }),
+      });
+
+      if (response.ok) {
+        // If the request was successful, navigate to the next page
+        navigate("/prestudy");
+      } else {
+        // Handle errors appropriately
+        console.error("Failed to save user ID to the database");
+      }
+    } catch (error) {
+      console.error("An error occurred:", error);
+    }
   };
 
   return (

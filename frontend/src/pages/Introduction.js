@@ -5,8 +5,16 @@ const Introduction = () => {
 
   const handleClick = (event) => {
     event.preventDefault();
-    console.log("Button clicked");
-    navigate("/pretask");
+
+     // Save session ID to local storage
+    const session_id = `session1-${crypto.randomUUID()}`;
+    localStorage.setItem("sessionId", session_id);
+
+    // Save session start time to local storage
+    const session_start_time = new Date();
+    localStorage.setItem("session_start_time", session_start_time);
+
+    navigate("/pretask/task1");
   };
 
   return (
@@ -17,8 +25,8 @@ const Introduction = () => {
         In this experiment, you will be given 4 work tasks. You will be asked to
         search for information for each of these work tasks. In this regard, you
         are free to choose an information system (eg normal search engine or
-        generative AI) that provides useful information for
-        the task at hand. In summary, the process of performing this test is:
+        generative AI) that provides useful information for the task at hand. In
+        summary, the process of performing this test is:
       </p>
       <ol className="procedure-list">
         <li>
