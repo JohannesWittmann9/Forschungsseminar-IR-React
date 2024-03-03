@@ -22,11 +22,11 @@ const Main = ({ task }) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          session_id: session_id,
-          user_id: user_id,
-          task_id: task_id,
-          session_start_time: session_start_time,
-          session_end_time: session_end_time,
+          session_id,
+          user_id,
+          task_id,
+          session_start_time,
+          session_end_time,
         }),
       });
 
