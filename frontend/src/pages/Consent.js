@@ -3,36 +3,17 @@ import { useNavigate } from "react-router-dom";
 
 const Consent = () => {
   const [userId, setUserId] = useState("");
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    try {
-      // Save user ID to local storage
-      localStorage.setItem("userId", userId);
-      const studyStartTime = new Date();
+    // Save user ID to local storage
+    const studyStartTime = new Date();
+    localStorage.setItem("userId", userId);
+    localStorage.setItem("study_start_time", studyStartTime);
 
-      // Send user ID to the backend
-      console.log("Sending request to backend...");
-      const response = await fetch("http://localhost:7000/api/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ user_id: userId, studyStartTime }),
-      });
-
-      if (response.ok) {
-        // If the request was successful, navigate to the next page
-        navigate("/prestudy");
-      } else {
-        // Handle errors appropriately
-        console.error("Failed to save user ID to the database");
-      }
-    } catch (error) {
-      console.error("An error occurred:", error);
-    }
+    navigate("/prestudy")
   };
 
   return (

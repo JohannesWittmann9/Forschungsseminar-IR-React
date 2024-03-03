@@ -11,6 +11,10 @@ const UserSchema = new mongoose.Schema(
       type: Date,
       default: Date.now,
     },
+    study_end_time: {
+      type: Date,
+      default: Date.now,
+    },
   },
   {
     timestamps: true,
