@@ -13,7 +13,7 @@ import user from "./assets/user.svg";
 import sendBtn from "./assets/send.svg";
 
 // Functional component for OpenAI chat interface in React
-const OpenAI = () => {
+const OpenAI = ({interaction_id}) => {
   // References to DOM elements
   const msgEnd = useRef(null);
   const chatForm = useRef(null);
@@ -42,8 +42,11 @@ const OpenAI = () => {
     // Clear the chat input field
     setChatInput("");
 
+    // Prepare the new message object
+    const newUserMessage = { text, isBot: false };
+
     // Add user's message to the messages state
-    setMessages([...messages, { text, isBot: false }]);
+    setMessages([...messages, newUserMessage]);
 
     // Send a POST request to the OpenAI API with the user's message
     if (chatForm.current) {
@@ -61,21 +64,41 @@ const OpenAI = () => {
       // Handle the response from the API
       if (res.ok) {
         const data = await res.json();
+
+        // Prepare the new bot message object
+        const newBotMessage = { text: data.bot, isBot: true };
+
         // Add the bot's response to the messages state
-        setMessages([
-          ...messages,
-          {
-            text: chatInput,
-            isBot: false,
-          },
-          {
-            text: data.bot,
-            isBot: true,
-          },
-        ]);
+        setMessages([...messages, newUserMessage, newBotMessage]);
+
+        // Retrieve existing messages from session storage
+        const existingMessages =
+          JSON.parse(sessionStorage.getItem(`messages-${interaction_id}`)) || [];
+
+        // Push the new messages to the existing messages array
+        existingMessages.push([newUserMessage, newBotMessage]);
+
+        // Update session storage with the combined array of old and new messages
+        sessionStorage.setItem(`messages-${interaction_id}`, JSON.stringify(existingMessages));
       } else {
         // Log any errors in the console
         const err = await res.json();
+
+        // Prepare the error message object
+        const errorMessage = { text: "Something went wrong...", isBot: true };
+
+        setMessages([...messages, newUserMessage, errorMessage]);
+
+        // Retrieve existing messages from session storage or initialize to an empty array if not found
+        let existingMessages =
+          JSON.parse(sessionStorage.getItem(`messages-${interaction_id}`)) || [];
+
+        // Push the error message to the existing messages array
+        existingMessages.push([newUserMessage, errorMessage]);
+
+        // Update session storage with the combined array of old and new messages
+        sessionStorage.setItem(`messages-${interaction_id}`, JSON.stringify(existingMessages));
+
         console.log(err.error.error.message);
       }
     }

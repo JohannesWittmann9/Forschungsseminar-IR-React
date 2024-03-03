@@ -4,18 +4,18 @@ import SearchEngine from "../components/SearchEngine";
 
 const Main = ({ task }) => {
   const navigate = useNavigate();
+  const session_id = localStorage.getItem("sessionId");
+  const user_id = localStorage.getItem("userId");
 
-  const handleClick = async (event) => {
-    event.preventDefault();
-    const session_id = localStorage.getItem("sessionId");
-      const user_id = localStorage.getItem("userId");
-      const task_id = task.id;
-      const session_start_time = localStorage.getItem("session_start_time");
-      const session_end_time = new Date();
+  const interaction_id = crypto.randomUUID();
+
+  const saveSessionData = async () => {
+    const task_id = task.id;
+    const session_start_time = localStorage.getItem("session_start_time");
+    const session_end_time = new Date();
 
     try {
-      // Send session data to the backend
-      console.log("Sending request to backend...");
+      console.log("Sending session data to the backend...");
       const response = await fetch("http://localhost:7000/api/sessions", {
         method: "POST",
         headers: {
@@ -30,15 +30,58 @@ const Main = ({ task }) => {
         }),
       });
 
-      if (response.ok) {
-        // If the request was successful, navigate to the next page
-        navigate(`/posttask/${task_id}`);
-      } else {
-        // Handle errors appropriately
-        console.error("Failed to save session to the database");
-      }
+      return response.ok;
     } catch (error) {
-      console.error("An error occurred:", error);
+      console.error("An error occurred while saving session data:", error);
+      return false;
+    }
+  };
+
+  const saveChatInteraction = async () => {
+    const interaction_type = "openai";
+    const messages = sessionStorage.getItem(`messages-${interaction_id}`);
+
+    try {
+      console.log("Sending chat interaction data to the backend...");
+      const response = await fetch(
+        "http://localhost:7000/api/chatinteractions",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            interaction_id,
+            user_id,
+            session_id,
+            interaction_type,
+            messages: JSON.parse(messages),
+          }),
+        }
+      );
+
+      return response.ok;
+    } catch (error) {
+      console.error(
+        "An error occurred while saving chat interaction data:",
+        error
+      );
+      return false;
+    }
+  };
+
+  const handleClick = async (event) => {
+    event.preventDefault();
+
+    const sessionSaved = await saveSessionData();
+    const interactionSaved = await saveChatInteraction();
+
+    if (sessionSaved && interactionSaved) {
+      navigate(`/posttask/${task.id}`);
+    } else {
+      console.error(
+        "Failed to save session or interaction data to the database"
+      );
     }
   };
   return (
@@ -51,7 +94,7 @@ const Main = ({ task }) => {
       </div>
       <div className="tools">
         <SearchEngine />
-        <OpenAI />
+        <OpenAI interaction_id={interaction_id}/>
       </div>
     </div>
   );

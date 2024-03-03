@@ -56,22 +56,19 @@ const PreTask = ({ task }) => {
     const session_start_time = new Date();
     localStorage.setItem("session_start_time", session_start_time);
 
-    // Display the "Saving..." message (pass a string value to display a custom message)
     const user_id = localStorage.getItem("userId");
     const results = sender.data;
 
     options.showSaveInProgress();
-    const xhr = new XMLHttpRequest();
 
     // send pre task data to backend
+    const xhr = new XMLHttpRequest();
     xhr.open("POST", "http://localhost:7000/api/pretasks");
     xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
     xhr.onload = xhr.onerror = function () {
       if (xhr.status === 200) {
-        // Display the "Success" message (pass a string value to display a custom message)
         options.showSaveSuccess();
       } else {
-        // Display the "Error" message (pass a string value to display a custom message)
         options.showSaveError();
       }
     };

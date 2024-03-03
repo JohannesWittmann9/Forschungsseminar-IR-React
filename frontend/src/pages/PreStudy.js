@@ -98,20 +98,19 @@ const PreStudy = () => {
   const model = new Model(json);
 
   model.onComplete.add(function (sender, options) {
-    // Display the "Saving..." message (pass a string value to display a custom message)
     const user_id = localStorage.getItem("userId");
     const results = sender.data;
 
     options.showSaveInProgress();
+
+    // send pre study data to backend
     const xhr = new XMLHttpRequest();
     xhr.open("POST", "http://localhost:7000/api/prestudies");
     xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
     xhr.onload = xhr.onerror = function () {
       if (xhr.status === 200) {
-        // Display the "Success" message (pass a string value to display a custom message)
         options.showSaveSuccess();
       } else {
-        // Display the "Error" message (pass a string value to display a custom message)
         options.showSaveError();
       }
     };

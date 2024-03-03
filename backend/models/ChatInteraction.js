@@ -6,15 +6,10 @@ const ChatInteractionSchema = new mongoose.Schema(
     user_id: String,
     session_id: String,
     interaction_type: String,
-    dialogues: {
+    messages: {
       type: Array,
-      default: [
-        {
-          question: String,
-          answer: String,
-        },
-      ],
-    },
+      default: [],
+    }
   },
   {
     timestamps: true,

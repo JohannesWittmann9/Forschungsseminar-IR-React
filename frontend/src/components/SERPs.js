@@ -8,20 +8,20 @@ import React, { useEffect, useState } from "react";
 
 const SERPs = ({ response, interaction_id }) => {
   const [content, setContent] = useState([]);
-
+  
   // Effect to update content when the response data changes
   useEffect(() => {
-    const handleItemClick = (item, index) => {
-      const data = {
-        interaction_id: interaction_id, // Assuming you have interaction_id available
-        doc_title: item.title,
-        doc_position: index,
-        doc_page_viewed: item.cacheId,
-      };
+    // const handleItemClick = (item, index) => {
+    //   const data = {
+    //     interaction_id: interaction_id, // Assuming you have interaction_id available
+    //     doc_title: item.title,
+    //     doc_position: index,
+    //     doc_page_viewed: item.cacheId,
+    //   };
 
-      // Sending message to background script
-      chrome.runtime.sendMessage({ type: "itemClicked", data: data });
-    };
+    //   // Sending message to background script
+    //   chrome.runtime.sendMessage({ type: "itemClicked", data: data });
+    // };
 
     try {
       // Map through the items in the response to create result components
@@ -34,7 +34,7 @@ const SERPs = ({ response, interaction_id }) => {
             target="_blank"
             href={item.link}
             rel="noopener noreferrer"
-            onClick={() => handleItemClick(item, i)}
+            // onClick={() => handleItemClick(item, i)}
           >
             <p>{item.title}</p>
           </a>
