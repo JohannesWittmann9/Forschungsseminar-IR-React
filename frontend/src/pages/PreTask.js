@@ -48,9 +48,16 @@ const PreTask = ({ task }) => {
   const model = new Model(json);
 
   model.onComplete.add(function (sender, options) {
+    // Save session ID to local storage
+    const session_id = crypto.randomUUID();
+    localStorage.setItem("sessionId", session_id);
+
+    // Save session start time to local storage
+    const session_start_time = new Date();
+    localStorage.setItem("session_start_time", session_start_time);
+
     // Display the "Saving..." message (pass a string value to display a custom message)
     const user_id = localStorage.getItem("userId");
-    const session_id = localStorage.getItem("sessionId");
     const results = sender.data;
 
     options.showSaveInProgress();
@@ -68,7 +75,7 @@ const PreTask = ({ task }) => {
         options.showSaveError();
       }
     };
-    xhr.send(JSON.stringify({ user_id, session_id, task_id, results }));
+    xhr.send(JSON.stringify({ user_id, task_id, results }));
   });
 
   return <Survey model={model}></Survey>;

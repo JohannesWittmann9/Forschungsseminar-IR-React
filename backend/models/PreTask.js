@@ -3,7 +3,6 @@ import mongoose from "mongoose";
 const PreTaskSchema = new mongoose.Schema(
   {
     user_id: String,
-    session_id: String,
     task_id: String,
     results: {
       type: Object,

@@ -2,10 +2,9 @@ import PreTask from "../models/PreTask.js";
 
 export const addPreTask = async (req, res) => {
   try {
-    const { user_id, session_id, task_id, results } = req.body;
+    const { user_id, task_id, results } = req.body;
     const preTask = await PreTask.create({
       user_id,
-      session_id,
       task_id,
       results,
     });

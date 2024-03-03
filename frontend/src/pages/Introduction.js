@@ -5,15 +5,6 @@ const Introduction = () => {
 
   const handleClick = (event) => {
     event.preventDefault();
-
-     // Save session ID to local storage
-    const session_id = `session1-${crypto.randomUUID()}`;
-    localStorage.setItem("sessionId", session_id);
-
-    // Save session start time to local storage
-    const session_start_time = new Date();
-    localStorage.setItem("session_start_time", session_start_time);
-
     navigate("/pretask/task1");
   };
 

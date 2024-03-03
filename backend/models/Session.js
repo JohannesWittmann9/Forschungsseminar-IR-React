@@ -2,11 +2,7 @@ import mongoose from "mongoose";
 
 const SessionSchema = new mongoose.Schema(
   {
-    session_id: {
-      type: String,
-      unique: true,
-      required: true
-    },
+    session_id: String,
     user_id: String,
     task_id: String,
     session_start_time: Date,

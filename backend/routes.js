@@ -8,6 +8,7 @@ import { getResults, postResults } from "./controllers/googleController.js";
 import { addUser } from "./controllers/userController.js";
 import { addPreStudy } from "./controllers/preStudyController.js";
 import { addPreTask } from "./controllers/preTaskController.js";
+import { addSession } from "./controllers/sessionController.js";
 import { addSearchInteraction } from "./controllers/searchInteractionController.js";
 import { addDocument } from "./controllers/docController.js";
 import { addChatInteraction } from "./controllers/chatInteractionController.js";
@@ -29,6 +30,7 @@ router.post("/google", postResults); // POST request for posting search results 
 router.post("/api/users", addUser);
 router.post("/api/prestudies", addPreStudy);
 router.post("/api/pretasks", addPreTask);
+router.post("/api/sessions", addSession);
 router.post("/api/searchinteractions", addSearchInteraction);
 router.post("/api/documents", addDocument);
 router.post("/api/chatinteractions", addChatInteraction);

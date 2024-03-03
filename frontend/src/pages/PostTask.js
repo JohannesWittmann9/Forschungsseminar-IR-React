@@ -62,7 +62,7 @@ const json = {
   showCompletedPage: false,
 };
 
-const sendPostTaskData = (user_id, session_id, task_id, results, options) => {
+const sendPostTaskData = (user_id, task_id, results, options) => {
   const postTaskXHR = new XMLHttpRequest();
   postTaskXHR.open("POST", "http://localhost:7000/api/posttasks");
   postTaskXHR.setRequestHeader(
@@ -76,49 +76,15 @@ const sendPostTaskData = (user_id, session_id, task_id, results, options) => {
       options.showSaveError();
     }
   };
-  postTaskXHR.send(JSON.stringify({ user_id, session_id, task_id, results }));
+  postTaskXHR.send(JSON.stringify({ user_id, task_id, results }));
 };
-
-const sendSessionData = (
-  user_id,
-  session_id,
-  task_id,
-  session_start_time,
-  session_end_time,
-  options
-) => {
-  const sessionXHR = new XMLHttpRequest();
-  sessionXHR.open("POST", "http://localhost:7000/api/sessions");
-  sessionXHR.setRequestHeader(
-    "Content-Type",
-    "application/json; charset=utf-8"
-  );
-  sessionXHR.onload = sessionXHR.onerror = function () {
-    if (sessionXHR.status === 200) {
-      options.showSaveSuccess();
-    } else {
-      options.showSaveError();
-    }
-  };
-  sessionXHR.send(
-    JSON.stringify({
-      session_id,
-      user_id,
-      task_id,
-      session_start_time,
-      session_end_time,
-    })
-  );
-};
-
-let currentIndex;
 
 const PostTask = ({ task, tasks }) => {
   json.pages[0].title = task.title;
   json.pages[0].description = task.desc;
 
   const task_id = task.id;
-  currentIndex = tasks.findIndex((t) => t.id === task_id);
+  const currentIndex = tasks.findIndex((t) => t.id === task_id);
 
   if (currentIndex !== -1 && currentIndex + 1 < tasks.length) {
     const nextTask = tasks[currentIndex + 1];
@@ -131,33 +97,11 @@ const PostTask = ({ task, tasks }) => {
 
   model.onComplete.add(function (sender, options) {
     const user_id = localStorage.getItem("userId");
-    const session_id = localStorage.getItem("sessionId");
     const results = sender.data;
 
     options.showSaveInProgress();
 
-    sendPostTaskData(user_id, session_id, task_id, results, options);
-
-    const session_start_time = localStorage.getItem("session_start_time");
-    const session_end_time = new Date();
-
-    sendSessionData(
-      user_id,
-      session_id,
-      task_id,
-      session_start_time,
-      session_end_time,
-      options
-    );
-
-    // start time of the next session is end time of the current session
-    localStorage.setItem(
-      "session_start_time",
-      session_end_time
-    );
-
-    const nextSessionId = `session${currentIndex + 2}-${crypto.randomUUID()}`;
-    localStorage.setItem("sessionId", nextSessionId);
+    sendPostTaskData(user_id, task_id, results, options);
   });
   return <Survey model={model}></Survey>;
 };

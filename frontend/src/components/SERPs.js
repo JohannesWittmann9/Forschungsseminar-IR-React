@@ -6,13 +6,23 @@ import React, { useEffect, useState } from "react";
 // Type: source code
 // Web address: https://dev.to/techbrewers/custom-search-engine-3o1f
 
-// Functional component for rendering Search Engine Results Pages (SERPs)
-const SERPs = ({ response }) => {
-  // State variable to store the content of the search results
+const SERPs = ({ response, interaction_id }) => {
   const [content, setContent] = useState([]);
 
   // Effect to update content when the response data changes
   useEffect(() => {
+    const handleItemClick = (item, index) => {
+      const data = {
+        interaction_id: interaction_id, // Assuming you have interaction_id available
+        doc_title: item.title,
+        doc_position: index,
+        doc_page_viewed: item.link,
+      };
+
+      // Sending message to background script
+      chrome.runtime.sendMessage({ type: "itemClicked", data: data });
+    };
+
     try {
       // Map through the items in the response to create result components
       let newContent = response.items.map((item, i) => (
@@ -24,6 +34,7 @@ const SERPs = ({ response }) => {
             target="_blank"
             href={item.link}
             rel="noopener noreferrer"
+            onClick={() => handleItemClick(item, i)}
           >
             <p>{item.title}</p>
           </a>
