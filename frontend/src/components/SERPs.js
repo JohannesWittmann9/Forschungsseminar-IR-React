@@ -16,7 +16,7 @@ const SERPs = ({ response, interaction_id }) => {
         interaction_id: interaction_id, // Assuming you have interaction_id available
         doc_title: item.title,
         doc_position: index,
-        doc_page_viewed: item.link,
+        doc_page_viewed: item.cacheId,
       };
 
       // Sending message to background script
