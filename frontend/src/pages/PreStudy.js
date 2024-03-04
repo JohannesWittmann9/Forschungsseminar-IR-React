@@ -1,6 +1,7 @@
 import "survey-core/defaultV2.css";
 import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
+import { postDataToServer } from "utils/utils";
 
 const json = {
   title: "Pre Study Questionnaire",
@@ -97,26 +98,25 @@ const json = {
 const PreStudy = () => {
   const model = new Model(json);
 
-  model.onComplete.add(function (sender, options) {
+  model.onComplete.add(async function (sender, options) {
     const user_id = localStorage.getItem("userId");
     const results = sender.data;
 
     options.showSaveInProgress();
 
-    // send pre study data to backend
-    const xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://localhost:7000/api/prestudies");
-    xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
-    xhr.onload = xhr.onerror = function () {
-      if (xhr.status === 200) {
-        options.showSaveSuccess();
-      } else {
-        options.showSaveError();
-      }
-    };
-    xhr.send(JSON.stringify({ user_id, results }));
+    try {
+      const preStudyUrl = "http://localhost:7000/api/prestudies";
+      await postDataToServer(preStudyUrl, {
+        user_id,
+        results,
+      });
+      options.showSaveSuccess();
+    } catch (error) {
+      options.showSaveError();
+      console.error("An error occurred:", error);
+    }
   });
-  
+
   return <Survey model={model}></Survey>;
 };
 

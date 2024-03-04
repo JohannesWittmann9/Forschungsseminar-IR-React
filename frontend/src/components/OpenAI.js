@@ -4,15 +4,11 @@
 // Type: source code
 // Web address: https://www.youtube.com/watch?v=EzkWAviyYgg&lc=UgzoXG3DUQkpEw30Hc14AaABAg
 
-// Importing necessary React components and hooks
 import { useEffect, useRef, useState } from "react";
-
-// Importing images for user and bot avatars, and send button
 import bot from "./assets/bot.svg";
 import user from "./assets/user.svg";
 import sendBtn from "./assets/send.svg";
 
-// Functional component for OpenAI chat interface in React
 const OpenAI = ({interaction_id}) => {
   // References to DOM elements
   const msgEnd = useRef(null);
@@ -104,7 +100,6 @@ const OpenAI = ({interaction_id}) => {
     }
   };
 
-  // JSX structure for rendering the chat interface
   return (
     <div id="open-ai">
       <div id="chat_container">
@@ -137,5 +132,4 @@ const OpenAI = ({interaction_id}) => {
   );
 };
 
-// Export the OpenAI component for use in other parts of the application
 export default OpenAI;

@@ -7,17 +7,8 @@ const UserSchema = new mongoose.Schema(
       unique: true,
       required: true
     },
-    study_start_time: {
-      type: Date,
-      default: Date.now,
-    },
-    study_end_time: {
-      type: Date,
-      default: Date.now,
-    },
-  },
-  {
-    timestamps: true,
+    study_start_time: Date,
+    study_end_time: Date,
   }
 );
 

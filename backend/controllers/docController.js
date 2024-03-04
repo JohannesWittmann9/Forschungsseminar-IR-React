@@ -8,7 +8,7 @@ export const addDocument = async (req, res) => {
       doc_title,
       doc_position,
       doc_page_viewed,
-      time_spent
+      // time_spent
     } = req.body;
     const document = await Document.create({
       doc_id,
@@ -16,7 +16,7 @@ export const addDocument = async (req, res) => {
       doc_title,
       doc_position,
       doc_page_viewed,
-      time_spent
+      // time_spent
     });
     res.status(200).json(document);
   } catch (err) {

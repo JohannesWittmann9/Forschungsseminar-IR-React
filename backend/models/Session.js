@@ -7,9 +7,6 @@ const SessionSchema = new mongoose.Schema(
     task_id: String,
     session_start_time: Date,
     session_end_time: Date
-  },
-  {
-    timestamps: true,
   }
 );
 

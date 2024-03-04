@@ -7,7 +7,7 @@ const DocumentSchema = new mongoose.Schema(
     doc_title: String,
     doc_position: Number,
     doc_page_viewed: Number,
-    time_spent: Date
+    // time_spent: Date
   },
   {
     timestamps: true,

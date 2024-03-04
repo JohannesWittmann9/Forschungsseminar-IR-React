@@ -1,6 +1,7 @@
 import "survey-core/defaultV2.css";
 import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
+import { postDataToServer } from "utils/utils";
 
 const json = {
   title: "Post Task Questionnnaire",
@@ -36,7 +37,7 @@ const json = {
         },
         {
           type: "radiogroup",
-          name: "question3",
+          name: "attention",
           title:
             "It is important that you pay attention in this study. Please tick 'Okay'. (Yes, No, Okay)",
           choices: [
@@ -62,23 +63,6 @@ const json = {
   showCompletedPage: false,
 };
 
-const sendPostTaskData = (user_id, task_id, results, options) => {
-  const postTaskXHR = new XMLHttpRequest();
-  postTaskXHR.open("POST", "http://localhost:7000/api/posttasks");
-  postTaskXHR.setRequestHeader(
-    "Content-Type",
-    "application/json; charset=utf-8"
-  );
-  postTaskXHR.onload = postTaskXHR.onerror = function () {
-    if (postTaskXHR.status === 200) {
-      options.showSaveSuccess();
-    } else {
-      options.showSaveError();
-    }
-  };
-  postTaskXHR.send(JSON.stringify({ user_id, task_id, results }));
-};
-
 const PostTask = ({ task, tasks }) => {
   json.pages[0].title = task.title;
   json.pages[0].description = task.desc;
@@ -95,13 +79,24 @@ const PostTask = ({ task, tasks }) => {
 
   const model = new Model(json);
 
-  model.onComplete.add(function (sender, options) {
+  model.onComplete.add(async function (sender, options) {
     const user_id = localStorage.getItem("userId");
     const results = sender.data;
 
     options.showSaveInProgress();
 
-    sendPostTaskData(user_id, task_id, results, options);
+    try {
+      const postTaskUrl = "http://localhost:7000/api/posttasks";
+      await postDataToServer(postTaskUrl, {
+        user_id,
+        task_id,
+        results,
+      });
+      options.showSaveSuccess();
+    } catch (error) {
+      options.showSaveError();
+      console.error("An error occurred:", error);
+    }
   });
   return <Survey model={model}></Survey>;
 };

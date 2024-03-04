@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { postDataToServer } from "utils/utils";
 
 // Author: Mrunank Pawar
 // Date: Aug 10, 2022
@@ -8,20 +9,69 @@ import React, { useEffect, useState } from "react";
 
 const SERPs = ({ response, interaction_id }) => {
   const [content, setContent] = useState([]);
-  
+
   // Effect to update content when the response data changes
   useEffect(() => {
     // const handleItemClick = (item, index) => {
+    // let doc_page_viewed;
+
+    // const startIndex = response.queries.request[0].startIndex;
+    // switch (startIndex) {
+    //   case 1:
+    //     doc_page_viewed = 1;
+    //     break;
+    //   case 11:
+    //     doc_page_viewed = 2;
+    //     break;
+    //   case 21:
+    //     doc_page_viewed = 3;
+    //     break;
+    //   default:
+    //     doc_page_viewed = 1;
+    // }
+
     //   const data = {
-    //     interaction_id: interaction_id, // Assuming you have interaction_id available
+    //     doc_id: item.cacheId
+    //     interaction_id: interaction_id,
     //     doc_title: item.title,
     //     doc_position: index,
-    //     doc_page_viewed: item.cacheId,
+    //     doc_page_viewed: response.queries.request[0].startIndex,
     //   };
 
     //   // Sending message to background script
     //   chrome.runtime.sendMessage({ type: "itemClicked", data: data });
     // };
+
+    const handleItemClick = async (item, index) => {
+      const doc_id = item.cacheId;
+      const doc_title = item.title;
+      const doc_position = index + 1;
+      let doc_page_viewed;
+
+      const startIndex = response.queries.request[0].startIndex;
+      switch (startIndex) {
+        case 1:
+          doc_page_viewed = 1;
+          break;
+        case 11:
+          doc_page_viewed = 2;
+          break;
+        case 21:
+          doc_page_viewed = 3;
+          break;
+        default:
+          doc_page_viewed = 1;
+      }
+
+      const docUrl = "http://localhost:7000/api/documents";
+      postDataToServer(docUrl, {
+        doc_id,
+        interaction_id,
+        doc_title,
+        doc_position,
+        doc_page_viewed,
+      });
+    };
 
     try {
       // Map through the items in the response to create result components
@@ -34,7 +84,7 @@ const SERPs = ({ response, interaction_id }) => {
             target="_blank"
             href={item.link}
             rel="noopener noreferrer"
-            // onClick={() => handleItemClick(item, i)}
+            onClick={() => handleItemClick(item, i)}
           >
             <p>{item.title}</p>
           </a>
@@ -63,7 +113,6 @@ const SERPs = ({ response, interaction_id }) => {
     }
   }, [response]);
 
-  // JSX structure for rendering the Search Engine Results Pages
   return (
     <div>
       {/* Display the number of results and search time */}
@@ -77,5 +126,4 @@ const SERPs = ({ response, interaction_id }) => {
   );
 };
 
-// Export the SERPs component for use in other parts of the application
 export default SERPs;

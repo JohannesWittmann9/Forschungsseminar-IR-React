@@ -1,6 +1,7 @@
 import "survey-core/defaultV2.css";
 import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
+import { postDataToServer } from "utils/utils";
 
 const json = {
   title: "Pre Task Questionnaire",
@@ -47,7 +48,7 @@ const PreTask = ({ task }) => {
 
   const model = new Model(json);
 
-  model.onComplete.add(function (sender, options) {
+  model.onComplete.add(async function (sender, options) {
     // Save session ID to local storage
     const session_id = crypto.randomUUID();
     localStorage.setItem("sessionId", session_id);
@@ -61,18 +62,18 @@ const PreTask = ({ task }) => {
 
     options.showSaveInProgress();
 
-    // send pre task data to backend
-    const xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://localhost:7000/api/pretasks");
-    xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
-    xhr.onload = xhr.onerror = function () {
-      if (xhr.status === 200) {
-        options.showSaveSuccess();
-      } else {
-        options.showSaveError();
-      }
-    };
-    xhr.send(JSON.stringify({ user_id, task_id, results }));
+    try {
+      const preTaskUrl = "http://localhost:7000/api/pretasks";
+      await postDataToServer(preTaskUrl, {
+        user_id,
+        task_id,
+        results,
+      });
+      options.showSaveSuccess();
+    } catch (error) {
+      options.showSaveError();
+      console.error("An error occurred:", error);
+    }
   });
 
   return <Survey model={model}></Survey>;
