@@ -32,7 +32,7 @@ def bson_to_csv(input_folder, output_folder):
 
             # Save DataFrame to CSV
             try:
-                df.to_csv(output_filepath, index=False)
+                df.to_csv(output_filepath, index=False, sep = ',')
                 print("Data has been successfully converted")
             except:
                 print("An exception occurred")
