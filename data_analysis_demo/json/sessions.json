@@ -1,0 +1,121 @@
+[{
+	"_id": {
+		"$oid": "65ed942bb6ec4550d1931565"
+	},
+	"session_id": "acfc9aab-4689-42be-b36e-8a8e42d797fb",
+	"user_id": "HP1",
+	"task_id": "task1",
+	"session_start_time": {
+		"$date": "2024-03-10T11:03:56Z"
+	},
+	"session_end_time": {
+		"$date": "2024-03-10T11:06:19.366Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed94f1b6ec4550d1931573"
+	},
+	"session_id": "64ad6db3-e360-4d63-82e1-a8722b8e99d2",
+	"user_id": "HP1",
+	"task_id": "task2",
+	"session_start_time": {
+		"$date": "2024-03-10T11:07:33Z"
+	},
+	"session_end_time": {
+		"$date": "2024-03-10T11:09:37.49Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed957bb6ec4550d193157b"
+	},
+	"session_id": "bd189b9f-18da-448f-8cca-02ee19bf8761",
+	"user_id": "HP1",
+	"task_id": "task3",
+	"session_start_time": {
+		"$date": "2024-03-10T11:10:52Z"
+	},
+	"session_end_time": {
+		"$date": "2024-03-10T11:11:55.665Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed970cb6ec4550d1931595"
+	},
+	"session_id": "db1d406b-6953-4d92-ba49-8244f586a1f9",
+	"user_id": "HP1",
+	"task_id": "task4",
+	"session_start_time": {
+		"$date": "2024-03-10T11:13:54Z"
+	},
+	"session_end_time": {
+		"$date": "2024-03-10T11:18:36.895Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9a27db0fdc3e4460d750"
+	},
+	"session_id": "f2e28367-0f4f-42be-8d6f-71afa9f77f28",
+	"user_id": "HP2",
+	"task_id": "task1",
+	"session_start_time": {
+		"$date": "2024-03-10T11:29:41Z"
+	},
+	"session_end_time": {
+		"$date": "2024-03-10T11:31:51.27Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9af7db0fdc3e4460d760"
+	},
+	"session_id": "cb9dcc10-ec41-4f4a-8238-eb1356dfed18",
+	"user_id": "HP2",
+	"task_id": "task2",
+	"session_start_time": {
+		"$date": "2024-03-10T11:33:06Z"
+	},
+	"session_end_time": {
+		"$date": "2024-03-10T11:35:19.215Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9b7cdb0fdc3e4460d768"
+	},
+	"session_id": "1650f09d-8ef5-4745-8e0c-f460b4fd432c",
+	"user_id": "HP2",
+	"task_id": "task3",
+	"session_start_time": {
+		"$date": "2024-03-10T11:35:51Z"
+	},
+	"session_end_time": {
+		"$date": "2024-03-10T11:37:32.202Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9caedb0fdc3e4460d782"
+	},
+	"session_id": "dfc539c7-cf3d-4bee-92df-7a6e92e42074",
+	"user_id": "HP2",
+	"task_id": "task4",
+	"session_start_time": {
+		"$date": "2024-03-10T11:39:28Z"
+	},
+	"session_end_time": {
+		"$date": "2024-03-10T11:42:38.517Z"
+	},
+	"__v": 0
+}]
+

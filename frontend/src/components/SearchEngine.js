@@ -1,12 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import searchBtn from "./assets/search.svg";
 import SERPs from "./SERPs";
 import { postDataToServer } from "utils/utils";
+import { v4 as uuidv4 } from 'uuid';
 
 const SearchEngine = () => {
   const [display, setDisplay] = useState("none");
   const [content, setContent] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
+  const [interaction_id, setInteractionId] = useState("");
+
+  useEffect(() => {
+    setInteractionId(uuidv4());
+  }, []);
 
   const fetchSearchResults = async (query, start) => {
     const response = await fetch("http://localhost:7000/google", {
@@ -43,14 +49,25 @@ const SearchEngine = () => {
 
   const handleSearch = async (e, start) => {
     e.preventDefault();
-
     setDisplay("block");
     setContent("");
 
     try {
       const data = await fetchSearchResults(searchQuery, start);
-      const interaction_id = crypto.randomUUID();
       sendSearchInteraction(data, interaction_id);
+      renderSearchResults(data, interaction_id);
+    } catch (error) {
+      console.error("An error occurred:", error);
+    }
+  };
+
+  const showResultsfromPage = async (e, start) => {
+    e.preventDefault();
+    setDisplay("block");
+    setContent("");
+
+    try {
+      const data = await fetchSearchResults(searchQuery, start);
       renderSearchResults(data, interaction_id);
     } catch (error) {
       console.error("An error occurred:", error);
@@ -76,9 +93,9 @@ const SearchEngine = () => {
         {content}
       </div>
       <div className="next-result-pages" style={{ display: display }}>
-        <span onClick={(e) => handleSearch(e, 1)}>1</span>
-        <span onClick={(e) => handleSearch(e, 11)}>2</span>
-        <span onClick={(e) => handleSearch(e, 21)}>3</span>
+        <span onClick={(e) => showResultsfromPage(e, 1)}>1</span>
+        <span onClick={(e) => showResultsfromPage(e, 11)}>2</span>
+        <span onClick={(e) => showResultsfromPage(e, 21)}>3</span>
       </div>
     </div>
   );

@@ -1,0 +1,27 @@
+[{
+	"_id": {
+		"$oid": "65ed97a1b6ec4550d193159d"
+	},
+	"user_id": "HP1",
+	"study_start_time": {
+		"$date": "2024-03-10T11:02:30Z"
+	},
+	"study_end_time": {
+		"$date": "2024-03-10T11:21:05.897Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9d71db0fdc3e4460d78a"
+	},
+	"user_id": "HP2",
+	"study_start_time": {
+		"$date": "2024-03-10T11:28:24Z"
+	},
+	"study_end_time": {
+		"$date": "2024-03-10T11:45:53.847Z"
+	},
+	"__v": 0
+}]
+

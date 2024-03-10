@@ -32,7 +32,7 @@ const Consent = () => {
             Generative AI Systems". The study is conducted by Johannes Wittmann,
             Nguyet Ha Phung, and Roman Görl and supervised by David Elsweiler
             from the University of Regensburg. The study with estimated 30
-            participants takes place in the period from 2024-03-01 to
+            participants takes place in the period from 2024-03-10 to
             2024-03-31. Please note:
           </p>
           <ul className="note">

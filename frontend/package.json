@@ -13,6 +13,7 @@
     "survey-core": "^1.9.132",
     "survey-react": "^1.9.127",
     "survey-react-ui": "^1.9.132",
+    "uuid": "^9.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

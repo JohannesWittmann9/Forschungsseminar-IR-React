@@ -1,0 +1,181 @@
+[{
+	"_id": {
+		"$oid": "65ed93b2b6ec4550d1931559"
+	},
+	"interaction_id": "dbc365d9-2f4c-4183-a4df-58fd7981982c",
+	"user_id": "HP1",
+	"session_id": "acfc9aab-4689-42be-b36e-8a8e42d797fb",
+	"interaction_type": "google",
+	"query": "reasons of high blood pressure",
+	"number_of_retrieved_docs": "1,590,000,000",
+	"createdAt": {
+		"$date": "2024-03-10T11:04:18.022Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:04:18.022Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed94a9b6ec4550d193156d"
+	},
+	"interaction_id": "8b43324f-3d3b-44da-9de2-bca1334f7470",
+	"user_id": "HP1",
+	"session_id": "64ad6db3-e360-4d63-82e1-a8722b8e99d2",
+	"interaction_type": "google",
+	"query": "one specie of dangerous ant",
+	"number_of_retrieved_docs": "20,200,000",
+	"createdAt": {
+		"$date": "2024-03-10T11:08:25.91Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:08:25.91Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed960ab6ec4550d1931583"
+	},
+	"interaction_id": "f4f26014-6ffb-4e45-8fe9-009395fd277f",
+	"user_id": "HP1",
+	"session_id": "db1d406b-6953-4d92-ba49-8244f586a1f9",
+	"interaction_type": "google",
+	"query": "issues of conventional methods of home heating",
+	"number_of_retrieved_docs": "104,000,000",
+	"createdAt": {
+		"$date": "2024-03-10T11:14:18.455Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:14:18.455Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9642b6ec4550d193158b"
+	},
+	"interaction_id": "f4f26014-6ffb-4e45-8fe9-009395fd277f",
+	"user_id": "HP1",
+	"session_id": "db1d406b-6953-4d92-ba49-8244f586a1f9",
+	"interaction_type": "google",
+	"query": "issues of solar panels",
+	"number_of_retrieved_docs": "249,000,000",
+	"createdAt": {
+		"$date": "2024-03-10T11:15:14.3Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:15:14.3Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed96e1b6ec4550d1931591"
+	},
+	"interaction_id": "f4f26014-6ffb-4e45-8fe9-009395fd277f",
+	"user_id": "HP1",
+	"session_id": "db1d406b-6953-4d92-ba49-8244f586a1f9",
+	"interaction_type": "google",
+	"query": "issues of conventional methods of home heating Fossil energy sources",
+	"number_of_retrieved_docs": "52,400,000",
+	"createdAt": {
+		"$date": "2024-03-10T11:17:53.37Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:17:53.37Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed99c0db0fdc3e4460d74a"
+	},
+	"interaction_id": "c82d84e9-e420-4bda-8a83-ec00e8c72025",
+	"user_id": "HP2",
+	"session_id": "f2e28367-0f4f-42be-8d6f-71afa9f77f28",
+	"interaction_type": "google",
+	"query": "what causes high blood pressure?",
+	"number_of_retrieved_docs": "1,190,000,000",
+	"createdAt": {
+		"$date": "2024-03-10T11:30:08.074Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:30:08.074Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9a8adb0fdc3e4460d758"
+	},
+	"interaction_id": "88d63e3d-8237-4e51-9da3-3dbc1c210798",
+	"user_id": "HP2",
+	"session_id": "cb9dcc10-ec41-4f4a-8238-eb1356dfed18",
+	"interaction_type": "google",
+	"query": "one specie of dangerous ant",
+	"number_of_retrieved_docs": "20,200,000",
+	"createdAt": {
+		"$date": "2024-03-10T11:33:30.246Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:33:30.246Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9c02db0fdc3e4460d770"
+	},
+	"interaction_id": "e2e51c24-0b7a-4a3e-b38a-e9a2ff994c37",
+	"user_id": "HP2",
+	"session_id": "dfc539c7-cf3d-4bee-92df-7a6e92e42074",
+	"interaction_type": "google",
+	"query": "issues fossil energy sources",
+	"number_of_retrieved_docs": "130,000,000",
+	"createdAt": {
+		"$date": "2024-03-10T11:39:46.793Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:39:46.793Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9c6adb0fdc3e4460d77a"
+	},
+	"interaction_id": "e2e51c24-0b7a-4a3e-b38a-e9a2ff994c37",
+	"user_id": "HP2",
+	"session_id": "dfc539c7-cf3d-4bee-92df-7a6e92e42074",
+	"interaction_type": "google",
+	"query": "issues fossil energy sources home heating",
+	"number_of_retrieved_docs": "43,400,000",
+	"createdAt": {
+		"$date": "2024-03-10T11:41:30.774Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:41:30.774Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9c8ddb0fdc3e4460d77e"
+	},
+	"interaction_id": "e2e51c24-0b7a-4a3e-b38a-e9a2ff994c37",
+	"user_id": "HP2",
+	"session_id": "dfc539c7-cf3d-4bee-92df-7a6e92e42074",
+	"interaction_type": "google",
+	"query": "issues solar panels home heating",
+	"number_of_retrieved_docs": "168,000,000",
+	"createdAt": {
+		"$date": "2024-03-10T11:42:05.659Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:42:05.659Z"
+	},
+	"__v": 0
+}]
+

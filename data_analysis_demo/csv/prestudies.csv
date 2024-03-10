@@ -1,0 +1,3 @@
+_id,user_id,results,createdAt,updatedAt,__v
+65ed935eb6ec4550d1931555,HP1,"{'search-engine-usage': 6, 'Ai-copilots-usage': 7, 'onl-search-freq': 'Multiple times per day', 'ai-search-freq': 'Multiple times per week'}",2024-03-10 11:02:54.141,2024-03-10 11:02:54.141,0
+65ed9967db0fdc3e4460d746,HP2,"{'search-engine-usage': 7, 'Ai-copilots-usage': 6, 'onl-search-freq': 'Multiple times per day', 'ai-search-freq': 'Multiple times per day'}",2024-03-10 11:28:39.526,2024-03-10 11:28:39.526,0

@@ -1,0 +1,243 @@
+[{
+	"_id": {
+		"$oid": "65ed942bb6ec4550d1931567"
+	},
+	"interaction_id": "ec60e535-b47f-4173-addd-23ecc93cb076",
+	"user_id": "HP1",
+	"session_id": "acfc9aab-4689-42be-b36e-8a8e42d797fb",
+	"interaction_type": "openai",
+	"messages": [
+		[
+			{
+				"text": "what causes high blood pressure\n",
+				"isBot": false
+			},
+			{
+				"text": "Something went wrong...",
+				"isBot": true
+			}
+		]
+	],
+	"createdAt": {
+		"$date": "2024-03-10T11:06:19.395Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:06:19.395Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed94f1b6ec4550d1931575"
+	},
+	"interaction_id": "a5ed6895-235d-4f8b-9fd8-817fb8436e3b",
+	"user_id": "HP1",
+	"session_id": "64ad6db3-e360-4d63-82e1-a8722b8e99d2",
+	"interaction_type": "openai",
+	"messages": [
+		[
+			{
+				"text": "A friend has just sent an email from an Internet café in the southern USA where she is on a hiking trip. She tells you that she has just stepped into an anthill of small red ants and has a large number of painful bites on her leg. She wants to know what species of ants they are likely to be. Name one specie of ant.",
+				"isBot": false
+			},
+			{
+				"text": "Something went wrong...",
+				"isBot": true
+			}
+		]
+	],
+	"createdAt": {
+		"$date": "2024-03-10T11:09:37.526Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:09:37.526Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed957bb6ec4550d193157d"
+	},
+	"interaction_id": "fd7682b6-803a-40fb-b855-2475e3c20c39",
+	"user_id": "HP1",
+	"session_id": "bd189b9f-18da-448f-8cca-02ee19bf8761",
+	"interaction_type": "openai",
+	"messages": [
+		[
+			{
+				"text": " which food additives pose a risk to your physical health, and are likely to be listed on grocery store labels.",
+				"isBot": false
+			},
+			{
+				"text": "Something went wrong...",
+				"isBot": true
+			}
+		],
+		[
+			{
+				"text": "which food additives risky to physical health",
+				"isBot": false
+			},
+			{
+				"text": "Something went wrong...",
+				"isBot": true
+			}
+		]
+	],
+	"createdAt": {
+		"$date": "2024-03-10T11:11:55.703Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:11:55.703Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed970cb6ec4550d1931597"
+	},
+	"interaction_id": "b53cd769-1808-4cb6-88e2-d948882701b8",
+	"user_id": "HP1",
+	"session_id": "db1d406b-6953-4d92-ba49-8244f586a1f9",
+	"interaction_type": "openai",
+	"messages": null,
+	"createdAt": {
+		"$date": "2024-03-10T11:18:36.925Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:18:36.925Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9a27db0fdc3e4460d752"
+	},
+	"interaction_id": "efcb9153-727b-4a7a-aaab-1a47079f36dd",
+	"user_id": "HP2",
+	"session_id": "f2e28367-0f4f-42be-8d6f-71afa9f77f28",
+	"interaction_type": "openai",
+	"messages": null,
+	"createdAt": {
+		"$date": "2024-03-10T11:31:51.308Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:31:51.308Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9af7db0fdc3e4460d762"
+	},
+	"interaction_id": "8752d84c-36b4-4265-a153-1d8c5d342f9f",
+	"user_id": "HP2",
+	"session_id": "cb9dcc10-ec41-4f4a-8238-eb1356dfed18",
+	"interaction_type": "openai",
+	"messages": [
+		[
+			{
+				"text": "A friend has just sent an email from an Internet café in the southern USA where she is on a hiking trip. She tells you that she has just stepped into an anthill of small red ants and has a large number of painful bites on her leg. She wants to know what species of ants they are likely to be. Name one specie of ant.",
+				"isBot": false
+			},
+			{
+				"text": "Something went wrong...",
+				"isBot": true
+			}
+		],
+		[
+			{
+				"text": "can you give me a name of dangerous ant specie",
+				"isBot": false
+			},
+			{
+				"text": "Something went wrong...",
+				"isBot": true
+			}
+		]
+	],
+	"createdAt": {
+		"$date": "2024-03-10T11:35:19.252Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:35:19.252Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9b7cdb0fdc3e4460d76a"
+	},
+	"interaction_id": "17fa92c9-7066-4c20-824f-70395af4d73b",
+	"user_id": "HP2",
+	"session_id": "1650f09d-8ef5-4745-8e0c-f460b4fd432c",
+	"interaction_type": "openai",
+	"messages": [
+		[
+			{
+				"text": "which food additives pose a risk to your physical health",
+				"isBot": false
+			},
+			{
+				"text": "Something went wrong...",
+				"isBot": true
+			}
+		],
+		[
+			{
+				"text": "i want to know which food additives is risky to my physical health",
+				"isBot": false
+			},
+			{
+				"text": "Something went wrong...",
+				"isBot": true
+			}
+		]
+	],
+	"createdAt": {
+		"$date": "2024-03-10T11:37:32.229Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:37:32.229Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9caedb0fdc3e4460d784"
+	},
+	"interaction_id": "90824a1d-0a94-4fde-a42e-a880a6175b57",
+	"user_id": "HP2",
+	"session_id": "dfc539c7-cf3d-4bee-92df-7a6e92e42074",
+	"interaction_type": "openai",
+	"messages": [
+		[
+			{
+				"text": "Friends are planning to build a new house and have heard that using solar energy panels for heating can save a lot of money. Since they do not know anything about home heating and the issues involved, they have asked for your help. You are uncertain as well, and do some research to identify some issues that need to be considered in deciding between more conventional methods of home heating (fossil energy sources) and solar panels.",
+				"isBot": false
+			},
+			{
+				"text": "Something went wrong...",
+				"isBot": true
+			}
+		],
+		[
+			{
+				"text": "issues fossil energy sources home heating",
+				"isBot": false
+			},
+			{
+				"text": "Something went wrong...",
+				"isBot": true
+			}
+		]
+	],
+	"createdAt": {
+		"$date": "2024-03-10T11:42:38.546Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:42:38.546Z"
+	},
+	"__v": 0
+}]
+

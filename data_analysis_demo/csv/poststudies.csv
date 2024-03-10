@@ -1,0 +1,3 @@
+_id,user_id,results,createdAt,updatedAt,__v
+65ed97a1b6ec4550d193159b,HP1,"{'gender': 'Female', 'age': 24, 'qualification': 'High school diploma or equivalent degree', 'occupation': 'Student', 'enjoy': ""Yes, it's very interesting "", 'Vp-stunden': True, 'matrikel-nr': 'abc12344'}",2024-03-10 11:21:05.848,2024-03-10 11:21:05.848,0
+65ed9d71db0fdc3e4460d788,HP2,"{'gender': 'Male', 'age': 23, 'qualification': 'Bachelor’s degree', 'occupation': 'Engineer', 'enjoy': 'Yes, the tasks are quite difficult but interesting', 'Vp-stunden': False}",2024-03-10 11:45:53.826,2024-03-10 11:45:53.826,0

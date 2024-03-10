@@ -1,0 +1,11 @@
+_id,interaction_id,user_id,session_id,interaction_type,query,number_of_retrieved_docs,createdAt,updatedAt,__v
+65ed93b2b6ec4550d1931559,dbc365d9-2f4c-4183-a4df-58fd7981982c,HP1,acfc9aab-4689-42be-b36e-8a8e42d797fb,google,reasons of high blood pressure,"1,590,000,000",2024-03-10 11:04:18.022,2024-03-10 11:04:18.022,0
+65ed94a9b6ec4550d193156d,8b43324f-3d3b-44da-9de2-bca1334f7470,HP1,64ad6db3-e360-4d63-82e1-a8722b8e99d2,google,one specie of dangerous ant,"20,200,000",2024-03-10 11:08:25.910,2024-03-10 11:08:25.910,0
+65ed960ab6ec4550d1931583,f4f26014-6ffb-4e45-8fe9-009395fd277f,HP1,db1d406b-6953-4d92-ba49-8244f586a1f9,google,issues of conventional methods of home heating,"104,000,000",2024-03-10 11:14:18.455,2024-03-10 11:14:18.455,0
+65ed9642b6ec4550d193158b,f4f26014-6ffb-4e45-8fe9-009395fd277f,HP1,db1d406b-6953-4d92-ba49-8244f586a1f9,google,issues of solar panels,"249,000,000",2024-03-10 11:15:14.300,2024-03-10 11:15:14.300,0
+65ed96e1b6ec4550d1931591,f4f26014-6ffb-4e45-8fe9-009395fd277f,HP1,db1d406b-6953-4d92-ba49-8244f586a1f9,google,issues of conventional methods of home heating Fossil energy sources,"52,400,000",2024-03-10 11:17:53.370,2024-03-10 11:17:53.370,0
+65ed99c0db0fdc3e4460d74a,c82d84e9-e420-4bda-8a83-ec00e8c72025,HP2,f2e28367-0f4f-42be-8d6f-71afa9f77f28,google,what causes high blood pressure?,"1,190,000,000",2024-03-10 11:30:08.074,2024-03-10 11:30:08.074,0
+65ed9a8adb0fdc3e4460d758,88d63e3d-8237-4e51-9da3-3dbc1c210798,HP2,cb9dcc10-ec41-4f4a-8238-eb1356dfed18,google,one specie of dangerous ant,"20,200,000",2024-03-10 11:33:30.246,2024-03-10 11:33:30.246,0
+65ed9c02db0fdc3e4460d770,e2e51c24-0b7a-4a3e-b38a-e9a2ff994c37,HP2,dfc539c7-cf3d-4bee-92df-7a6e92e42074,google,issues fossil energy sources,"130,000,000",2024-03-10 11:39:46.793,2024-03-10 11:39:46.793,0
+65ed9c6adb0fdc3e4460d77a,e2e51c24-0b7a-4a3e-b38a-e9a2ff994c37,HP2,dfc539c7-cf3d-4bee-92df-7a6e92e42074,google,issues fossil energy sources home heating,"43,400,000",2024-03-10 11:41:30.774,2024-03-10 11:41:30.774,0
+65ed9c8ddb0fdc3e4460d77e,e2e51c24-0b7a-4a3e-b38a-e9a2ff994c37,HP2,dfc539c7-cf3d-4bee-92df-7a6e92e42074,google,issues solar panels home heating,"168,000,000",2024-03-10 11:42:05.659,2024-03-10 11:42:05.659,0

@@ -1,0 +1,44 @@
+[{
+	"_id": {
+		"$oid": "65ed97a1b6ec4550d193159b"
+	},
+	"user_id": "HP1",
+	"results": {
+		"gender": "Female",
+		"age": 24,
+		"qualification": "High school diploma or equivalent degree",
+		"occupation": "Student",
+		"enjoy": "Yes, it's very interesting ",
+		"Vp-stunden": true,
+		"matrikel-nr": "abc12344"
+	},
+	"createdAt": {
+		"$date": "2024-03-10T11:21:05.848Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:21:05.848Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9d71db0fdc3e4460d788"
+	},
+	"user_id": "HP2",
+	"results": {
+		"gender": "Male",
+		"age": 23,
+		"qualification": "Bachelor’s degree",
+		"occupation": "Engineer",
+		"enjoy": "Yes, the tasks are quite difficult but interesting",
+		"Vp-stunden": false
+	},
+	"createdAt": {
+		"$date": "2024-03-10T11:45:53.826Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:45:53.826Z"
+	},
+	"__v": 0
+}]
+

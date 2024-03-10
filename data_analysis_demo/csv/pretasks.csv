@@ -1,0 +1,9 @@
+_id,user_id,task_id,results,createdAt,updatedAt,__v
+65ed939cb6ec4550d1931557,HP1,task1,"{'familiarity': 3, 'complexity': 2}",2024-03-10 11:03:56.947,2024-03-10 11:03:56.947,0
+65ed9475b6ec4550d193156b,HP1,task2,"{'familiarity': 3, 'complexity': 2}",2024-03-10 11:07:33.869,2024-03-10 11:07:33.869,0
+65ed953cb6ec4550d1931579,HP1,task3,"{'familiarity': 3, 'complexity': 6}",2024-03-10 11:10:52.548,2024-03-10 11:10:52.548,0
+65ed95f2b6ec4550d1931581,HP1,task4,"{'familiarity': 6, 'complexity': 6}",2024-03-10 11:13:54.884,2024-03-10 11:13:54.884,0
+65ed99a5db0fdc3e4460d748,HP2,task1,"{'familiarity': 5, 'complexity': 2}",2024-03-10 11:29:41.503,2024-03-10 11:29:41.503,0
+65ed9a72db0fdc3e4460d756,HP2,task2,"{'familiarity': 2, 'complexity': 2}",2024-03-10 11:33:06.982,2024-03-10 11:33:06.982,0
+65ed9b17db0fdc3e4460d766,HP2,task3,"{'familiarity': 3, 'complexity': 6}",2024-03-10 11:35:51.725,2024-03-10 11:35:51.725,0
+65ed9bf0db0fdc3e4460d76e,HP2,task4,"{'familiarity': 4, 'complexity': 6}",2024-03-10 11:39:28.845,2024-03-10 11:39:28.845,0

@@ -1,0 +1,145 @@
+[{
+	"_id": {
+		"$oid": "65ed939cb6ec4550d1931557"
+	},
+	"user_id": "HP1",
+	"task_id": "task1",
+	"results": {
+		"familiarity": 3,
+		"complexity": 2
+	},
+	"createdAt": {
+		"$date": "2024-03-10T11:03:56.947Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:03:56.947Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9475b6ec4550d193156b"
+	},
+	"user_id": "HP1",
+	"task_id": "task2",
+	"results": {
+		"familiarity": 3,
+		"complexity": 2
+	},
+	"createdAt": {
+		"$date": "2024-03-10T11:07:33.869Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:07:33.869Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed953cb6ec4550d1931579"
+	},
+	"user_id": "HP1",
+	"task_id": "task3",
+	"results": {
+		"familiarity": 3,
+		"complexity": 6
+	},
+	"createdAt": {
+		"$date": "2024-03-10T11:10:52.548Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:10:52.548Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed95f2b6ec4550d1931581"
+	},
+	"user_id": "HP1",
+	"task_id": "task4",
+	"results": {
+		"familiarity": 6,
+		"complexity": 6
+	},
+	"createdAt": {
+		"$date": "2024-03-10T11:13:54.884Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:13:54.884Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed99a5db0fdc3e4460d748"
+	},
+	"user_id": "HP2",
+	"task_id": "task1",
+	"results": {
+		"familiarity": 5,
+		"complexity": 2
+	},
+	"createdAt": {
+		"$date": "2024-03-10T11:29:41.503Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:29:41.503Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9a72db0fdc3e4460d756"
+	},
+	"user_id": "HP2",
+	"task_id": "task2",
+	"results": {
+		"familiarity": 2,
+		"complexity": 2
+	},
+	"createdAt": {
+		"$date": "2024-03-10T11:33:06.982Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:33:06.982Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9b17db0fdc3e4460d766"
+	},
+	"user_id": "HP2",
+	"task_id": "task3",
+	"results": {
+		"familiarity": 3,
+		"complexity": 6
+	},
+	"createdAt": {
+		"$date": "2024-03-10T11:35:51.725Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:35:51.725Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9bf0db0fdc3e4460d76e"
+	},
+	"user_id": "HP2",
+	"task_id": "task4",
+	"results": {
+		"familiarity": 4,
+		"complexity": 6
+	},
+	"createdAt": {
+		"$date": "2024-03-10T11:39:28.845Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:39:28.845Z"
+	},
+	"__v": 0
+}]
+

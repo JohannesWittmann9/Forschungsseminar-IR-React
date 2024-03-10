@@ -1,0 +1,407 @@
+[{
+	"_id": {
+		"$oid": "65ed93b8b6ec4550d193155b"
+	},
+	"doc_id": "WsAkANfJ91IJ",
+	"interaction_id": "dbc365d9-2f4c-4183-a4df-58fd7981982c",
+	"doc_title": "High blood pressure (hypertension) - Causes - NHS",
+	"doc_position": 1,
+	"doc_page_viewed": 1,
+	"createdAt": {
+		"$date": "2024-03-10T11:04:24.719Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:04:24.719Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed93bcb6ec4550d193155d"
+	},
+	"interaction_id": "dbc365d9-2f4c-4183-a4df-58fd7981982c",
+	"doc_title": "High blood pressure (hypertension) - Symptoms & causes - Mayo ...",
+	"doc_position": 2,
+	"doc_page_viewed": 1,
+	"createdAt": {
+		"$date": "2024-03-10T11:04:28.844Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:04:28.844Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed93f1b6ec4550d193155f"
+	},
+	"doc_id": "WsAkANfJ91IJ",
+	"interaction_id": "dbc365d9-2f4c-4183-a4df-58fd7981982c",
+	"doc_title": "High blood pressure (hypertension) - Causes - NHS",
+	"doc_position": 1,
+	"doc_page_viewed": 1,
+	"createdAt": {
+		"$date": "2024-03-10T11:05:21.551Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:05:21.551Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed93f8b6ec4550d1931561"
+	},
+	"doc_id": "woHuwkcrMb0J",
+	"interaction_id": "dbc365d9-2f4c-4183-a4df-58fd7981982c",
+	"doc_title": "High Blood Pressure Symptoms and Causes | cdc.gov",
+	"doc_position": 3,
+	"doc_page_viewed": 1,
+	"createdAt": {
+		"$date": "2024-03-10T11:05:28.226Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:05:28.226Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9413b6ec4550d1931563"
+	},
+	"doc_id": "J2r0ELKhavcJ",
+	"interaction_id": "dbc365d9-2f4c-4183-a4df-58fd7981982c",
+	"doc_title": "What Causes High Blood Pressure? | National Kidney Foundation",
+	"doc_position": 2,
+	"doc_page_viewed": 2,
+	"createdAt": {
+		"$date": "2024-03-10T11:05:55.758Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:05:55.758Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed94aeb6ec4550d193156f"
+	},
+	"doc_id": "bPhM5ENQYrcJ",
+	"interaction_id": "8b43324f-3d3b-44da-9de2-bca1334f7470",
+	"doc_title": "List of Top Ten Most Dangerous Ants in the World",
+	"doc_position": 2,
+	"doc_page_viewed": 1,
+	"createdAt": {
+		"$date": "2024-03-10T11:08:30.928Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:08:30.928Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed94c4b6ec4550d1931571"
+	},
+	"doc_id": "8RaY12MW8asJ",
+	"interaction_id": "8b43324f-3d3b-44da-9de2-bca1334f7470",
+	"doc_title": "Top 5 Most Dangerous Poisonous Ant Bites for Humans",
+	"doc_position": 1,
+	"doc_page_viewed": 2,
+	"createdAt": {
+		"$date": "2024-03-10T11:08:52.181Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:08:52.181Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed961db6ec4550d1931585"
+	},
+	"doc_id": "xZ6CB-aQSFoJ",
+	"interaction_id": "f4f26014-6ffb-4e45-8fe9-009395fd277f",
+	"doc_title": "Furnaces and Boilers | Department of Energy",
+	"doc_position": 1,
+	"doc_page_viewed": 1,
+	"createdAt": {
+		"$date": "2024-03-10T11:14:37.804Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:14:37.804Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9628b6ec4550d1931587"
+	},
+	"doc_id": "oZyYWyZ98a4J",
+	"interaction_id": "f4f26014-6ffb-4e45-8fe9-009395fd277f",
+	"doc_title": "What are the Pros and Cons of Hydrogen Fuel Cells? - TWI",
+	"doc_position": 5,
+	"doc_page_viewed": 1,
+	"createdAt": {
+		"$date": "2024-03-10T11:14:48.124Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:14:48.124Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9638b6ec4550d1931589"
+	},
+	"doc_id": "99Q9bEdaPDIJ",
+	"interaction_id": "f4f26014-6ffb-4e45-8fe9-009395fd277f",
+	"doc_title": "The Advantages and Disadvantages of Renewable Energy ...",
+	"doc_position": 3,
+	"doc_page_viewed": 3,
+	"createdAt": {
+		"$date": "2024-03-10T11:15:04.461Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:15:04.461Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9645b6ec4550d193158d"
+	},
+	"doc_id": "WvquxDIksDwJ",
+	"interaction_id": "f4f26014-6ffb-4e45-8fe9-009395fd277f",
+	"doc_title": "The Dark Side of Solar Power",
+	"doc_position": 1,
+	"doc_page_viewed": 1,
+	"createdAt": {
+		"$date": "2024-03-10T11:15:17.261Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:15:17.261Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9651b6ec4550d193158f"
+	},
+	"doc_id": "md10YltjU7AJ",
+	"interaction_id": "f4f26014-6ffb-4e45-8fe9-009395fd277f",
+	"doc_title": "Solar Energy: Benefits and Drawbacks",
+	"doc_position": 4,
+	"doc_page_viewed": 1,
+	"createdAt": {
+		"$date": "2024-03-10T11:15:29.911Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:15:29.911Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed96f3b6ec4550d1931593"
+	},
+	"doc_id": "DNDuuB7XFFQJ",
+	"interaction_id": "f4f26014-6ffb-4e45-8fe9-009395fd277f",
+	"doc_title": "Fossil Fuels: The Dirty Facts",
+	"doc_position": 1,
+	"doc_page_viewed": 1,
+	"createdAt": {
+		"$date": "2024-03-10T11:18:11.211Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:18:11.211Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed99cadb0fdc3e4460d74c"
+	},
+	"doc_id": "TpreaBfGPgkJ",
+	"interaction_id": "c82d84e9-e420-4bda-8a83-ec00e8c72025",
+	"doc_title": "Causes of High Blood Pressure - Risk Factors: Weight, Diet, Age ...",
+	"doc_position": 7,
+	"doc_page_viewed": 1,
+	"createdAt": {
+		"$date": "2024-03-10T11:30:18.296Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:30:18.296Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed99ffdb0fdc3e4460d74e"
+	},
+	"doc_id": "eosLnlL9p1UJ",
+	"interaction_id": "c82d84e9-e420-4bda-8a83-ec00e8c72025",
+	"doc_title": "What Causes High Blood Pressure? | University of Utah Health",
+	"doc_position": 7,
+	"doc_page_viewed": 3,
+	"createdAt": {
+		"$date": "2024-03-10T11:31:11.154Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:31:11.154Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9a8fdb0fdc3e4460d75a"
+	},
+	"doc_id": "bPhM5ENQYrcJ",
+	"interaction_id": "88d63e3d-8237-4e51-9da3-3dbc1c210798",
+	"doc_title": "List of Top Ten Most Dangerous Ants in the World",
+	"doc_position": 2,
+	"doc_page_viewed": 1,
+	"createdAt": {
+		"$date": "2024-03-10T11:33:35.194Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:33:35.194Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9a9fdb0fdc3e4460d75c"
+	},
+	"doc_id": "pX5UHleJ1BwJ",
+	"interaction_id": "88d63e3d-8237-4e51-9da3-3dbc1c210798",
+	"doc_title": "Blog - Top 8 Most Dangerous Ants Of All Time",
+	"doc_position": 1,
+	"doc_page_viewed": 1,
+	"createdAt": {
+		"$date": "2024-03-10T11:33:51.107Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:33:51.107Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9aa6db0fdc3e4460d75e"
+	},
+	"doc_id": "8RaY12MW8asJ",
+	"interaction_id": "88d63e3d-8237-4e51-9da3-3dbc1c210798",
+	"doc_title": "Top 5 Most Dangerous Poisonous Ant Bites for Humans",
+	"doc_position": 1,
+	"doc_page_viewed": 2,
+	"createdAt": {
+		"$date": "2024-03-10T11:33:58.252Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:33:58.252Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9c07db0fdc3e4460d772"
+	},
+	"doc_id": "JFterFwuzeEJ",
+	"interaction_id": "e2e51c24-0b7a-4a3e-b38a-e9a2ff994c37",
+	"doc_title": "Fact Sheet | Climate, Environmental, and Health Impacts of Fossil ...",
+	"doc_position": 3,
+	"doc_page_viewed": 1,
+	"createdAt": {
+		"$date": "2024-03-10T11:39:51.072Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:39:51.072Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9c0bdb0fdc3e4460d774"
+	},
+	"doc_id": "lK5ln5VzvRcJ",
+	"interaction_id": "e2e51c24-0b7a-4a3e-b38a-e9a2ff994c37",
+	"doc_title": "8 reasons why we need to phase out the fossil fuel industry ...",
+	"doc_position": 7,
+	"doc_page_viewed": 1,
+	"createdAt": {
+		"$date": "2024-03-10T11:39:55.599Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:39:55.599Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9c41db0fdc3e4460d776"
+	},
+	"interaction_id": "e2e51c24-0b7a-4a3e-b38a-e9a2ff994c37",
+	"doc_title": "Pollution from Fossil-Fuel Combustion is the Leading Environmental ...",
+	"doc_position": 1,
+	"doc_page_viewed": 3,
+	"createdAt": {
+		"$date": "2024-03-10T11:40:49.158Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:40:49.158Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9c52db0fdc3e4460d778"
+	},
+	"doc_id": "Xc_WBudn9GUJ",
+	"interaction_id": "e2e51c24-0b7a-4a3e-b38a-e9a2ff994c37",
+	"doc_title": "Fossil fuels - Our World in Data",
+	"doc_position": 1,
+	"doc_page_viewed": 2,
+	"createdAt": {
+		"$date": "2024-03-10T11:41:06.521Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:41:06.521Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9c79db0fdc3e4460d77c"
+	},
+	"doc_id": "DNDuuB7XFFQJ",
+	"interaction_id": "e2e51c24-0b7a-4a3e-b38a-e9a2ff994c37",
+	"doc_title": "Fossil Fuels: The Dirty Facts",
+	"doc_position": 5,
+	"doc_page_viewed": 1,
+	"createdAt": {
+		"$date": "2024-03-10T11:41:45.674Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:41:45.674Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9c94db0fdc3e4460d780"
+	},
+	"doc_id": "fMQyypJ2W-4J",
+	"interaction_id": "e2e51c24-0b7a-4a3e-b38a-e9a2ff994c37",
+	"doc_title": "Advantages & Disadvantages of Solar Energy | GreenMatch",
+	"doc_position": 6,
+	"doc_page_viewed": 1,
+	"createdAt": {
+		"$date": "2024-03-10T11:42:12.94Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:42:12.94Z"
+	},
+	"__v": 0
+}]
+

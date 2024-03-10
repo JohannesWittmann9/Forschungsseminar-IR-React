@@ -1,0 +1,39 @@
+[{
+	"_id": {
+		"$oid": "65ed935eb6ec4550d1931555"
+	},
+	"user_id": "HP1",
+	"results": {
+		"search-engine-usage": 6,
+		"Ai-copilots-usage": 7,
+		"onl-search-freq": "Multiple times per day",
+		"ai-search-freq": "Multiple times per week"
+	},
+	"createdAt": {
+		"$date": "2024-03-10T11:02:54.141Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:02:54.141Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "65ed9967db0fdc3e4460d746"
+	},
+	"user_id": "HP2",
+	"results": {
+		"search-engine-usage": 7,
+		"Ai-copilots-usage": 6,
+		"onl-search-freq": "Multiple times per day",
+		"ai-search-freq": "Multiple times per day"
+	},
+	"createdAt": {
+		"$date": "2024-03-10T11:28:39.526Z"
+	},
+	"updatedAt": {
+		"$date": "2024-03-10T11:28:39.526Z"
+	},
+	"__v": 0
+}]
+
