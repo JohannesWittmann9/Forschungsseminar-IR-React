@@ -1,0 +1,27 @@
+[
+    {
+      "title": "Task 1: ",
+      "category": "simple",
+      "desc": "Your brother complains of constant headaches. One night when his headache is accompanied by nausea, you go to the medical center with him and find out that his blood pressure is 120. You want to know: what causes high blood pressure?",
+      "id": "task1"
+    },
+    {
+      "title": "Task 2: ",
+      "category": "simple",
+      "desc": "A friend has just sent an email from an Internet café in the southern USA where she is on a hiking trip. She tells you that she has just stepped into an anthill of small red ants and has a large number of painful bites on her leg. She wants to know what species of ants they are likely to be. Name one specie of ant.",
+      "id": "task2"
+    },
+    {
+      "title": "Task 3: ",
+      "category": "complex",
+      "desc": "You recently heard about the book \"Fast Food Nation\" and it has really influenced the way you think about your diet. You note in particular the amount and types of food additives contained in the things that you eat every day. Now you want to understand which food additives pose a risk to your physical health, and are likely to be listed on grocery store labels.",
+      "id": "task3"
+    },
+    {
+      "title": "Task 4: ",
+      "category": "complex",
+      "desc": "Friends are planning to build a new house and have heard that using solar energy panels for heating can save a lot of money. Since they do not know anything about home heating and the issues involved, they have asked for your help. You are uncertain as well, and do some research to identify some issues that need to be considered in deciding between more conventional methods of home heating (fossil energy sources) and solar panels.",
+      "id": "task4"
+    }
+  ]
+
