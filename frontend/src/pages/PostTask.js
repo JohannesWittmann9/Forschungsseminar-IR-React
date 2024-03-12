@@ -27,6 +27,26 @@ const json = {
           maxRateDescription: "Very complex",
         },
         {
+          type: "radiogroup",
+          name: "result-system",
+          title:
+            "What information retrieval system did your answer come from?",
+          choices: [
+            {
+              value: "Normal search engine (Google)",
+              text: "Normal search engine (Google)",
+            },
+            {
+              value: "Generative AI (ChatGPT)",
+              text: "Generative AI (ChatGPT)",
+            },
+            {
+              value: "Both Google and ChatGPT",
+              text: "Both Google and ChatGPT",
+            },
+          ],
+        },
+        {
           type: "rating",
           name: "satisfaction-rate",
           title: "How satisfied are you with your search result?",
