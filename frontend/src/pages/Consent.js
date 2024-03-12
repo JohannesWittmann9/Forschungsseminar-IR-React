@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 
 const Consent = () => {
   const [userId, setUserId] = useState("");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const handleSubmit = async (event) => {
+  useEffect(() => {
+    setUserId(uuidv4());
+  }, []);
+
+  const handleClick = async (event) => {
     event.preventDefault();
 
     // Save user ID to local storage
@@ -13,7 +18,7 @@ const Consent = () => {
     localStorage.setItem("userId", userId);
     localStorage.setItem("study_start_time", studyStartTime);
 
-    navigate("/prestudy")
+    navigate("/prestudy");
   };
 
   return (
@@ -216,20 +221,13 @@ const Consent = () => {
           </div>
         </section>
 
-        <form className="consent-agree" onSubmit={handleSubmit}>
-          <div className="accept-consent">
-            <input type="checkbox" required />
-            <span>I have read and understood the consent form.</span>
-          </div>
-          <input
-            className="id-input"
-            placeholder="Please enter your ID"
-            onChange={(e) => setUserId(e.target.value)}
-            required
-          />
-
-          <button className="continue-btn">Continue</button>
-        </form>
+        <div className="accept-consent">
+          <input type="checkbox" required />
+          <span>I have read and understood the consent form.</span>
+        </div>
+        <button className="continue-btn" onClick={handleClick}>
+          Continue
+        </button>
       </div>
     </>
   );

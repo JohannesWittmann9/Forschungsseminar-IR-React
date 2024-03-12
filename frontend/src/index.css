@@ -121,19 +121,12 @@ h3 {
   flex-direction: column;
 }
 
-.accept-consent span {
-  margin-left: 1.5rem;
+.accept-consent {
+  margin-top: 1.5rem;
 }
 
-.consent-agree .id-input {
-  width: 40rem;
-  height: 5rem;
-  margin: 2rem 0 0;
-  background: transparent;
-  color: #1a1a1a;
-  padding: 1rem 2rem;
-  border: 1px solid #1a1a1a;
-  font-size: 1.8rem;
+.accept-consent span {
+  margin: 1.5rem;
 }
 
 .continue-btn {
