@@ -17,6 +17,7 @@ const json = {
           name: "search-engine-usage",
           title:
             "I use search systems (such as Google or Bing) to help answer questions and concerns on a daily basis",
+          isRequired: true,
           rateCount: 7,
           rateMax: 7,
           minRateDescription: "Strongly disagree",
@@ -27,6 +28,7 @@ const json = {
           name: "Ai-copilots-usage",
           title:
             "I use AI copilots (such as ChatGPT or BingAI) to help answer questions and concerns on a daily basis",
+          isRequired: true,
           rateCount: 7,
           rateMax: 7,
           minRateDescription: "Strongly disagree",
@@ -37,6 +39,7 @@ const json = {
           name: "onl-search-freq",
           title:
             "On average, how often do you use search systems to answer information needs?",
+          isRequired: true,
           choices: [
             {
               value: "Never",
@@ -65,6 +68,7 @@ const json = {
           name: "ai-search-freq",
           title:
             "On average, how often do you use AI copilots to answer information needs?",
+          isRequired: true,
           choices: [
             {
               value: "Never",

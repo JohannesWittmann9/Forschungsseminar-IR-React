@@ -16,11 +16,13 @@ const json = {
           type: "comment",
           name: "answer",
           title: "If you had to, what would be your answer to the question?",
+          isRequired: true,
         },
         {
           type: "rating",
           name: "complexity-rate",
           title: "How complex would you rate the task now?",
+          isRequired: true,
           rateCount: 7,
           rateMax: 7,
           minRateDescription: "Not complex",
@@ -29,8 +31,8 @@ const json = {
         {
           type: "radiogroup",
           name: "result-system",
-          title:
-            "What information retrieval system did your answer come from?",
+          title: "What information retrieval system did your answer come from?",
+          isRequired: true,
           choices: [
             {
               value: "Normal search engine (Google)",
@@ -50,6 +52,7 @@ const json = {
           type: "rating",
           name: "satisfaction-rate",
           title: "How satisfied are you with your search result?",
+          isRequired: true,
           rateCount: 7,
           rateMax: 7,
           minRateDescription: "Not satisfied",
@@ -60,6 +63,7 @@ const json = {
           name: "attention",
           title:
             "It is important that you pay attention in this study. Please tick 'Okay'. (Yes, No, Okay)",
+          isRequired: true,
           choices: [
             {
               value: "Yes",

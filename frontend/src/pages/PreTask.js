@@ -16,6 +16,7 @@ const json = {
           type: "rating",
           name: "familiarity",
           title: "How familiar are you with the topic?",
+          isRequired: true,
           rateCount: 7,
           rateMax: 7,
           minRateDescription: "Not familiar",
@@ -26,6 +27,7 @@ const json = {
           name: "complexity",
           title:
             "How complex would you rate the task to be, just by reading it?",
+          isRequired: true,
           rateCount: 7,
           rateMax: 7,
           minRateDescription: "Not complex",
