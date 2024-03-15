@@ -166,10 +166,10 @@ h3 {
   align-items: center;
   margin: 0.5rem;
   height: 10vh;
-  /* overflow-y: scroll;
+  overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 
 .task::-webkit-scrollbar {
