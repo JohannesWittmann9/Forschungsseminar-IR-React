@@ -221,13 +221,17 @@ const Consent = () => {
           </div>
         </section>
 
-        <div className="accept-consent">
-          <input type="checkbox" required />
-          <span>I have read and understood the consent form.</span>
-        </div>
-        <button className="continue-btn" onClick={handleClick}>
-          Continue
-        </button>
+        <form onSubmit={handleClick}>
+          <div className="accept-consent">
+            <input type="checkbox" required />
+            <span>I have read and understood the consent form.</span>
+          </div>
+          <button className="continue-btn">
+            Continue
+          </button>
+        </form>
+        
+        
       </div>
     </>
   );
